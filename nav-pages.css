@@ -1,0 +1,32 @@
+
+
+#nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  background-color: #f2e6b3;
+  padding:1px 10px 1px;
+}
+
+#nav-bar-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+      
+
+.button {
+  background-color: lightgoldenrodyellow;
+  color: black;
+  padding: 14px 16px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#nav-bar .button {
+  background-color: red;
+  padding: 1rem 2rem;
+}
