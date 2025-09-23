@@ -1,34 +1,106 @@
-.textbox {
 
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  border-radius: 2px;
 }
+
+body {
+  /*overflow: hidden;*/
+  height: 100%;
+  font-family: 'SUSE mono';
+  background-color: #54585a;
+  margin: 0px;
+}
+
 
 #nav-bar {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  background-color: #f2e6b3;
-  padding:1px 10px 1px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #d6001c;
+  padding:5px 10px 5px;
+  color: white;
+  min-height: 5rem;
+  /*margin: 0px;*/
+}
+#nav-bar .button {
+  padding: 1rem 2rem;
+  border: 1px solid #54585a;
 }
 
-#nav-bar-buttons {
+
+#page-trifurcation {
   display: flex;
-  justify-content: space-evenly;
-  flex-grow: 1;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border: 7px solid black;
+
+}
+.page-item {
+  flex: 1;
+  max-width: 40%;
 }
 
+#seals {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+#seals img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.img {
+    width:  100%;
+    height: 33%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.textbox {
+  min-height: 50px;
+  min-width: 30%;
+  max-width: 20%;
+  padding: 0px 5px;
+  border: 7px solid black;
+  background-color: #9ea2a2;
+  border-top: none;
+  color: black;
+  text-align: center;
+}
+.textbox a {
+  color: black;
+  font-weight: bold;
+}
       
 
 .button {
-  background-color: lightgoldenrodyellow;
-  color: black;
-  padding: 14px 16px;
+  background-color: black;
+  color: white;
+  padding: 12px 16px;
   margin: auto;
   text-align: center;
   justify-content: center;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-#nav-bar .button {
-  background-color: red;
-  padding: 1rem 2rem;
+h3 a:hover {
+  text-shadow: 0px -1px 0px black;
 }
+h1 a {
+  color: white;
+  align-self: center;
+}
+h1 a:hover {
+  text-shadow: 0px -1px 0px white;
+}
+
