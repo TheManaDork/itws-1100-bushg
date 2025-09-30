@@ -4,8 +4,8 @@
  
   <title>Bush Bully Pulpit the Third</title>
   <subtitle>The Newest On Graydon Bush's Career</subtitle>
-  <!-- <link href="http://example.org/feed/" rel="self" /> -->
-  <!-- <link href="http://example.org/" /> -->
+  <link href="http://bushgrpi.eastus.cloudapp.azure.com/iit/labs/lab4/feed.xml/" rel="self" />
+  <link href="http://bushgrpi.eastus.cloudapp.azure.com/iit/index.html/" />
   <id>urn:uuid:ea174d2e-3c2f-11ee-b939-0242ac120002</id>
   <updated>2025-09-29T23:36:00-04:00</updated>
   <author>
