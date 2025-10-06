@@ -4,6 +4,31 @@
   <head>
     <title>GRAYDON BUSH - HOME</title>
     <link rel="stylesheet" href="./resources/nav-pages.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Graydon Bush — Computer Science major at Rensselaer Polytechnic Institute specializing in data systems, algorithm design, and computational efficiency." />
+    <meta name="keywords" content="Graydon Bush, RPI, computer science, data systems, algorithms, software, portfolio" />
+    <meta name="author" content="Graydon Bush" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="http://bushgrpi.eastus.cloudapp.azure.com/iit/" />
+
+    <!-- Browser icons / theme -->
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#111827" />
+
+    <!-- Open Graph (for link previews) -->
+    <meta property="og:site_name" content="Graydon Bush" />
+    <meta property="og:title" content="Graydon Bush — Data Systems & Algorithm Design" />
+    <meta property="og:description" content="Computer Science major at RPI specializing in data systems and algorithm design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bushgrpi.eastus.cloudapp.azure.com/iit/" />
+    <meta property="og:image" content="http://bushgrpi.eastus.cloudapp.azure.com/iit/preview.png" />
+    <meta property="og:image:alt" content="Preview of Graydon Bush's portfolio" />
+
   </head>
   <body>
     <div id="nav-bar">
@@ -38,6 +63,37 @@
         <h4>Leadership</h4>
         <h3>For a more detailed list of my abilities and accomplishments please check out my resume and about me on the left side of the nav bar!</h3>
       </div>
+
+      <div id="tip-box" style="
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      background-color: rgba(20, 20, 30, 0.9);
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: monospace;
+      font-size: 14px;
+      color: white;
+      box-shadow: 0 0 10px #00ff9f33;
+      z-index: 1000;
+    "></div>
+
+    <script>
+    const tips = [
+      '💡 Tip: "<-Intro to ITWS" takes you home.',
+      '🐱 Fun fact: The cat image mirrors perfectly.',
+      '🧠 Did you know? This site’s layout is hand-coded. Unlike this tip box.',
+      '🎓 ITWS = Information Technology and Web Science.',
+      '🕹 Retro mode forever — no frameworks required!',
+      '📦 Labs are stored neatly under /iit/labs/.',
+      '🚀 Keep your HTML tidy, future you will thank you.',
+      'Remember: Chat bots are for suckers!'
+    ];
+    document.getElementById('tip-box').textContent = 
+      tips[Math.floor(Math.random() * tips.length)];
+    </script>
+
     </div>
   </body>
   </html>
