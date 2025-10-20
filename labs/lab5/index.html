@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <title>GRAYDON BUSH - LAB 5</title>
+      <link rel="stylesheet" href="../../resources/nav-pages.css">
+      <script type="text/javascript" src="lab5.js"></script>
+  </head>
+  <body>
+    <div id="nav-bar">
+      <h1><a href="../index.html"><-LABS </a> <===> Lab 5</h1>
+    </div>
+    <div id="page-trifurcation">
+      <img style="min-height: 90%;" class="page-item" src="../../resources/images/mont1.jpg" alt="pic of my cat">
+      <div class="textbox page-item">
+        <h3>Welcome to my responce form!</h3>
+        <h3>Here is a form!</h3>
+        <!-- <button id="RPI" onclick="goToRPI()">RPI!!!</button> -->
+        <div>
+          <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate(this);">
+            <fieldset>
+              <legend>Contact Information</legend>
+              <!-- <div class="formData"> -->
+
+               <label for="firstName" class="field">First Name:</label>
+               <div class="value"><input type="text" size="60" value="Please Enter First Name" name="firstName" id="firstName" /></div>
+
+               <label for="lastName" class="field">Last Name:</label>
+               <div class="value"><input type="text" size="60" value="Please Enter Last Name" name="lastName" id="lastName" /></div>
+
+               <label for="title" class="field">Title:</label>
+               <div class="value"><input type="text" size="60" value="Please Enter Title" name="title" id="title" /></div>
+
+               <label for="org" class="field">Organization:</label>
+               <div class="value"><input type="text" size="60" value="Please Enter Org" name="org" id="org" /></div>
+
+               <label for="pseudonym" class="field">Nickname:</label>
+               <div class="value"><input type="text" size="60" value="Please Enter NickName" name="pseudonym" id="pseudonym"/></div>
+
+               <label for="comments" class="field">Comments:</label>
+               <div class="value"><textarea rows="4" cols="40" name="comments" id="comments" onclick="clearPlaceholderText(this)">Please enter your comments</textarea></div>
+
+               <input type="submit" value="save" id="save" name="save" />
+            <!-- </div> -->
+         </fieldset>
+      </form>
+      <h3 id="results">
+        Results:
+      </h3>
+        </div>
+
+      </div>
+      <img style="min-height: 90%; transform: scaleX(-1);" class="page-item" src="../../resources/images/mont1.jpg" alt="pic of my cat">
+      </div>
+    </div>
+  </body>
+  </html>
