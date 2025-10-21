@@ -104,7 +104,37 @@ h1 a:hover {
   text-shadow: 0px -1px 0px white;
 }
 
+form {
+  margin: 0 auto;
+  
+}
 
 fieldset {
   border-color: black;
+  text-align: center;
+  max-width: 50vw;
+  left: 50%;
 }
+
+.field {
+  resize: inline;
+}
+
+textarea {
+  border-width: 2px;
+  border-style: inset;
+  border-color: light-dark(rgb(118, 118, 118));
+  border-image: initial;
+  resize: none;
+}
+textarea:focus {
+  background-color: #fee;
+}
+
+input {
+  max-width: 50%;
+}
+input:focus {
+  background-color: #fee;
+}
+

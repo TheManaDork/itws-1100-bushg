@@ -13,41 +13,36 @@
     <div id="page-trifurcation">
       <img style="min-height: 90%;" class="page-item" src="../../resources/images/mont1.jpg" alt="pic of my cat">
       <div class="textbox page-item">
-        <h3>Welcome to my responce form!</h3>
-        <h3>Here is a form!</h3>
-        <!-- <button id="RPI" onclick="goToRPI()">RPI!!!</button> -->
-        <div>
-          <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate(this);">
-            <fieldset>
-              <legend>Contact Information</legend>
-              <!-- <div class="formData"> -->
+      <h3>Welcome to my responce form!</h3>
+      <h3>Here is a form!</h3>
+      <form id="addForm" name="addForm" class="" action="#" method="post" onsubmit="return validate(this);">
+        <fieldset>
+          <legend>Contact Information</legend>
+          <!-- <div class="formData"> -->
 
-               <label for="firstName" class="field">First Name:</label>
-               <div class="value"><input type="text" size="60" value="Please Enter First Name" name="firstName" id="firstName" /></div>
+          <label for="firstName" class="field">First Name</label>
+          <div class="value"><input type="text" size="60" value="Please enter your First Name" name="firstName" id="firstName" /></div>
 
-               <label for="lastName" class="field">Last Name:</label>
-               <div class="value"><input type="text" size="60" value="Please Enter Last Name" name="lastName" id="lastName" /></div>
+          <label for="lastName" class="field">Last Name</label>
+          <div class="value"><input type="text" size="60" value="Please enter your Last Name" name="lastName" id="lastName" /></div>
 
-               <label for="title" class="field">Title:</label>
-               <div class="value"><input type="text" size="60" value="Please Enter Title" name="title" id="title" /></div>
+          <label for="title" class="field">Title</label>
+          <div class="value"><input type="text" size="60" value="Please enter your Title" name="title" id="title" /></div>
 
-               <label for="org" class="field">Organization:</label>
-               <div class="value"><input type="text" size="60" value="Please Enter Org" name="org" id="org" /></div>
+          <label for="org" class="field">Organization</label>
+          <div class="value"><input type="text" size="60" value="Please enter your Organization" name="org" id="org" /></div>
 
-               <label for="pseudonym" class="field">Nickname:</label>
-               <div class="value"><input type="text" size="60" value="Please Enter NickName" name="pseudonym" id="pseudonym"/></div>
+          <label for="pseudonym" class="field">Nickname</label>
+          <div class="value"><input type="text" size="60" value="Please enter your Nickname" name="pseudonym" id="pseudonym"/></div>
 
-               <label for="comments" class="field">Comments:</label>
-               <div class="value"><textarea rows="4" cols="40" name="comments" id="comments" onclick="clearPlaceholderText(this)">Please enter your comments</textarea></div>
+          <label for="comments" class="field">Comments</label>
+          <div class="value"><textarea rows="4" cols="40" name="comments" id="comments">Please enter your Comments</textarea></div>
 
-               <input type="submit" value="save" id="save" name="save" />
-            <!-- </div> -->
-         </fieldset>
+          <input type="submit" value="save" id="save" name="save" />
+       </fieldset>
       </form>
-      <h3 id="results">
-        Results:
-      </h3>
-        </div>
+      <button id="results">Results</button>
+        <!-- </div> -->
 
       </div>
       <img style="min-height: 90%; transform: scaleX(-1);" class="page-item" src="../../resources/images/mont1.jpg" alt="pic of my cat">
