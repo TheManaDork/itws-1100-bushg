@@ -93,6 +93,14 @@ body {
   font-weight: bold;
 }
 
+
+button {
+  margin: 10px 10px;
+}
+button:hover {
+  background-color: #fee;
+}
+
 h3 a:hover {
   text-shadow: 0px -1px 0px black;
 }
@@ -126,6 +134,7 @@ textarea {
   border-color: light-dark(rgb(118, 118, 118));
   border-image: initial;
   resize: none;
+  border-radius: 4px;
 }
 textarea:focus {
   background-color: #fee;
@@ -133,8 +142,12 @@ textarea:focus {
 
 input {
   max-width: 50%;
+  border-radius: 4px;
 }
 input:focus {
   background-color: #fee;
 }
 
+label h3 {
+  margin: 0 0;
+}
