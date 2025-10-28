@@ -58,6 +58,10 @@ $(document).ready(function () {
     //
     // 🏁 STARTER TEMPLATE:
     $('#nameHeading').click(function() {
+        // console.log(this);
+        $('#nameHeading .myName').text("Graydon Bush").css('color', '#E05').css('background-color', 'black').css('border-radius', '10px').css('padding', '2px 8px');
+        // nameBox[0].innerHTML = "Graydon Bush";
+        // console.log(new Text("Graydon Bush"));
         // TODO: Your code here
         // Use .text() to change the text content
         // Use .css() to apply styling
@@ -88,21 +92,27 @@ $(document).ready(function () {
     $('#hideText').click(function(e) {
         e.preventDefault(); // Prevents the link from jumping to top
         // TODO: Hide the #textContent over 2000ms
-        
+        $('#textContent').hide(500);
         logToConsole('Hide text clicked - implement fade out animation!', 'info');
     });
     
     $('#showText').click(function(e) {
         e.preventDefault();
         // TODO: Show the #textContent over 3300ms
-        
+        $('#textContent').show(500);
         logToConsole('Show text clicked - implement fade in animation!', 'info');
     });
     
     $('#toggleText').click(function(e) {
         e.preventDefault();
         // TODO: Toggle the #textContent visibility
-        
+        if($('#textContent').is(':hidden')) {
+          console.log("revealing text");
+          $('#textContent:hidden').show(500);
+        } else if($('#textContent').is(':visible')) {
+          console.log("hiding text");
+           $('#textContent:visible').hide(500);
+        }
         logToConsole('Toggle text clicked - implement toggle functionality!', 'info');
     });
 
@@ -125,10 +135,12 @@ $(document).ready(function () {
     //    - Target: '#labList li' (all list items in the labList)
     //
     // 🏁 STARTER TEMPLATE:
-    $('#labList li').click(function() {
+    $('#labList').on('click', 'li', function(e) {
         // TODO: Toggle the 'red' class on the clicked list item
         
-        const itemText = $(this).text();
+        const itemText = $(this).children('li').text();
+        $(this).toggleClass('red');
+        console.log(":"+e.innerHTML);
         logToConsole(`List item clicked: "${itemText}" - implement color toggle!`, 'info');
     });
 
@@ -150,11 +162,15 @@ $(document).ready(function () {
     //    - Increment listItemCounter after each addition: listItemCounter++
     //
     // 🏁 STARTER TEMPLATE:
+    var counter = 5;
     $('#AddListItem').click(function() {
         // TODO: Create and append a new list item
         // Remember to increment the counter and use .append()
-        
+        console.log($('#labList'));
+        counter++;
+        $('#labList').append($('<li>').text("MOOOORE MOOOOOOOOOORE!!!!! (" + counter + ")"));
         logToConsole('Add list item clicked - implement dynamic list item creation!', 'info');
+        console.log($('#labList li').length);
     });
 
 
@@ -185,6 +201,20 @@ $(document).ready(function () {
     
     // TODO: Replace the Problem 3 handler with a delegated version
     // Research $(document).on() syntax for event delegation
+
+
+    // $("#addCustomItem").click(function() {
+    //     console.log("adding items");
+    //     console.log($('#customList').length);
+    //     if($('#customList').length != 1) {
+    //         console.log("initing list");
+    //         $('#formChallenge').after($('<ul>').attr('id', "customList"));
+    //     }
+    //     let input = $('#userInput').text();
+    //     if(input.length > 0) {
+    //         $('#customList').append($('<li>').text(input));
+    //     }
+    // });
 
 
 }); // End of $(document).ready()
