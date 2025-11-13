@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-  $.ajax({url: "../resources/menuItem.json", success: function(result) {
+  $.ajax({url: "../resources/menuItems.json", success: function(result) {
   	alert(result);
   }});
 
