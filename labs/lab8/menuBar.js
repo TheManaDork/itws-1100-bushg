@@ -9,11 +9,11 @@ $(document).ready(function() {
   	success: function(responseData, status) {
   	  var output = "";
   	  alert("success");
-  	  $.each(responseData.items, function(i, item) {
+  	  $.each(responseData.items, function(i, menuItem) {
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
-  	}, failure: function() {
+  	}, error: function() {
   		alert("darnit");
   	}
   });
