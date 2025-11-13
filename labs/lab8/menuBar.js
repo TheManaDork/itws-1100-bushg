@@ -4,7 +4,7 @@ $(document).ready(function() {
   alert("doc loaded");
   $.ajax({
   	type: "GET",
-  	url: "../iit/resources/menuItems.json",
+  	url: "menuItems.json",
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
