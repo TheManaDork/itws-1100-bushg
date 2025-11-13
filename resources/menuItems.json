@@ -1,21 +1,23 @@
 {
-	"menuItem" : [
-		{
-			"title": "Labs",
-			"link": "./labs/lab5/index.html"
-		},
-		{
-			"title": "Resume",
-			"link": "./labs/lab2/bushg-GraydonBush-resume.html",
-		},
-		{
-			"title": "Contact",
-			"link": "./labs/lab5/index.html",
-		},
-		{
-			"title": "Resources",
-			"link": "./resources/index.html",
-		},
-	]
-
+  "menuItem": [
+    {
+      "title": "Labs",
+      "link": "./labs/lab5/index.html"
+    },
+    {
+      "title": "Resume",
+      "link": "./labs/lab2/bushg-GraydonBush-resume.html"
+      
+    },
+    {
+      "title": "Contact",
+      "link": "./labs/lab5/index.html"
+      
+    },
+    {
+      "title": "Resources",
+      "link": "./resources/index.html"
+      
+    }
+  ]
 }
