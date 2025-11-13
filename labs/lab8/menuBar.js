@@ -1,6 +1,7 @@
 
 
 $(document).ready(function() {
+  alert("doc loaded");
   $.ajax({
   	type: "GET",
   	url: "../iit/resources/menuItems.json",
@@ -17,4 +18,5 @@ $(document).ready(function() {
   	}
   });
 
+  alert("past Ajax");
 });
