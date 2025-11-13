@@ -12,6 +12,8 @@ $(document).ready(function() {
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
+  	}, failure: function() {
+  		alert("darnit");
   	}
   });
 
