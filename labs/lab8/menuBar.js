@@ -7,7 +7,10 @@ $(document).ready(function() {
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
-  	  output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>'
+  	  alert("success");
+  	  $.each(responseData.items, function(i, item) {
+  	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
+  	  });
   	  document.getElementById("nav-bar").innerHTML += output;
   	}
   });
