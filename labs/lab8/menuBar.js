@@ -13,8 +13,8 @@ $(document).ready(function() {
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
-  	}, error: function() {
-  		alert("darnit");
+  	}, error: function(msg) {
+  		alert("darnit: " + msg.status + "\n" + msg.statusText);
   	}
   });
 
