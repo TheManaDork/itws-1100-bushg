@@ -1,10 +1,10 @@
 
 
 $(document).ready(function() {
-  alert("doc loaded");
+  // alert("doc loaded");
   $.ajax({
   	type: "GET",
-  	url: "menuItems.json",
+  	url: "../iit/resources/menuItems.json",
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
@@ -18,5 +18,5 @@ $(document).ready(function() {
   	}
   });
 
-  alert("past Ajax");
+  // alert("past Ajax");
 });
