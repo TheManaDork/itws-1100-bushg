@@ -10,6 +10,9 @@ $(document).ready(function() {
   	  var output = "";
   	  alert("success " + responseData);
       let menuItem = responseData[document.title];
+      if(!menuItem) {
+        alert("error: menuItem array emptry");
+      }
   	  $.each(menuItem, function(i, item) {
         alert(item.title);
   	    output+= '<a class="button" href="' + item.link + '">' + item.title + '</a>';
