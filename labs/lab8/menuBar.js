@@ -10,7 +10,7 @@ $(document).ready(function() {
   	  var output = "";
   	  alert("success " + responseData);
 
-  	  $.each(responseData.items, function(i, menuItem) {
+  	  $.each(responseData.menuItem, function(i, menuItem) {
         alert(i.title);
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
