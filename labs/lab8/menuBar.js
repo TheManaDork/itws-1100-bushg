@@ -14,6 +14,7 @@ $(document).ready(function() {
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
       alert("|"output+"|");
+      // hi
   	}, error: function(msg) {
   		alert("darnit: " + msg.status + "\n" + msg.statusText);
   	}
