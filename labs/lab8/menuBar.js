@@ -9,7 +9,9 @@ $(document).ready(function() {
   	success: function(responseData, status) {
   	  var output = "";
   	  alert("success " + responseData);
+
   	  $.each(responseData.items, function(i, menuItem) {
+        alert(menuItem.title);
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
