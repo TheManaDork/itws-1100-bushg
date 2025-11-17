@@ -8,7 +8,7 @@ $(document).ready(function() {
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
-  	  alert("success");
+  	  alert("success " + responseData);
   	  $.each(responseData.items, function(i, menuItem) {
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
