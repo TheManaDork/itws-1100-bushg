@@ -10,9 +10,9 @@ $(document).ready(function() {
   	  var output = "";
   	  alert("success " + responseData);
       responseData = responseData[document.title];
-  	  $.each(responseData, function(i) {
+  	  $.each(responseData, function(i, item) {
         alert(i.title);
-  	    output+= '<a class="button" href="' + i.link + '">' + i.title + '</a>';
+  	    output+= '<a class="button" href="' + item.link + '">' + item.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
       alert("|"+output+"|");
