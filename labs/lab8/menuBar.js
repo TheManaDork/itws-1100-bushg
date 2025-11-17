@@ -13,7 +13,7 @@ $(document).ready(function() {
   	    output+= '<a class="button" href="' + menuItem.link + '">' + menuItem.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
-      alert("|"output+"|");
+      alert("|"+output+"|");
       // hi
   	}, error: function(msg) {
   		alert("darnit: " + msg.status + "\n" + msg.statusText);
