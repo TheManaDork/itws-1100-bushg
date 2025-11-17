@@ -9,7 +9,7 @@ $(document).ready(function() {
   	success: function(responseData, status) {
   	  var output = "";
   	  alert("success " + responseData);
-      responseData = responseData[$("title").innerText];
+      responseData = responseData[document.title];
   	  $.each(responseData, function(i) {
         alert(i.title);
   	    output+= '<a class="button" href="' + i.link + '">' + i.title + '</a>';
