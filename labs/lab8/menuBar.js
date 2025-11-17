@@ -4,7 +4,8 @@ $(document).ready(function() {
   // alert("doc loaded");
   $.ajax({
   	type: "GET",
-  	url: "resources/menuItems.json",
+  	url: "http://bushgrpi.eastus.cloudapp.azure.com/iit/resources/menuItems.json",
+    
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
