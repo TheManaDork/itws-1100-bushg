@@ -23,17 +23,16 @@ $(document).ready(function() {
 
   // alert("past Ajax");
 
-var mont = 1;
 
-  document.getElementById('monty').addEventListener("click", function() {
+  document.getElementsByClassName('monty').addEventListener("click", function() {
     alert(this.src.substring(this.src[this.src.length-10], this.src[this.src.length-1]));
     // if(this.src.substring(this.src.lastIndexOf('/'), this.src[this.src.length-1]) == "mont1.jpg") {
-    if(mont == 1) {
+    if(this.dataset.state="1") {
       this.src = this.src.substring(0,this.src.lastIndexOf('/')+1) + "mont2.jpg";
-      mont = 2;
+      this.dataset.state = 2;
     } else {
       this.src = this.src.substring(0,this.src.lastIndexOf('/')+1) + "mont1.jpg";
-      mont = 1;
+      this.dataset.state = 1;
     }
   });
 });
