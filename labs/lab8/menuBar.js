@@ -1,30 +1,36 @@
 
 
 $(document).ready(function() {
-  // alert("doc loaded");
   $.ajax({
   	type: "GET",
   	url: "http://bushgrpi.eastus.cloudapp.azure.com/iit/resources/menuItems.json",
-    
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
   	  alert("success " + responseData);
-      let menuItem = responseData[document.title];
+      let menuItem = responseData[document.title]; // I implemented this for my home page as well, I am currently determining what json to load based on page title.
       if(!menuItem) {
         alert("error: menuItem array emptry");
       }
   	  $.each(menuItem, function(i, item) {
-        alert(item.title);
   	    output+= '<a class="button" href="' + item.link + '">' + item.title + '</a>';
   	  });
   	  document.getElementById("nav-bar").innerHTML += output;
-      alert("|"+output+"|");
-      // hi
   	}, error: function(msg) {
   		alert("darnit: " + msg.status + "\n" + msg.statusText);
   	}
   });
 
   // alert("past Ajax");
+
+
+
+  document.getElementById('monty').addEventListener("click", function() {
+    if(this.src.substring(this.src.lastIndexOf('/'), this.src[this.src.length-1]) == "mont1.jpg") {
+      this.src = this.src.substring(this.src.lastIndexOf('/')) + "mont2.jpg";
+    } else {
+      this.src = this.src.substring(this.src.lastIndexOf('/')) + "mont1.jpg";
+
+    }
+  });
 });
