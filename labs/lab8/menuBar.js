@@ -24,15 +24,16 @@ $(document).ready(function() {
   // alert("past Ajax");
 
 
-  document.getElementsByClassName('monty').addEventListener("click", function() {
-    alert(this.src.substring(this.src[this.src.length-10], this.src[this.src.length-1]));
-    // if(this.src.substring(this.src.lastIndexOf('/'), this.src[this.src.length-1]) == "mont1.jpg") {
-    if(this.dataset.state="1") {
-      this.src = this.src.substring(0,this.src.lastIndexOf('/')+1) + "mont2.jpg";
-      this.dataset.state = 2;
+  document.getElementsByClassName('monty').forEach(function(object) {
+    object.addEventListener("click", function() {
+    alert(object.src.substring(object.src[object.src.length-10], object.src[object.src.length-1]));
+    // if(object.src.substring(object.src.lastIndexOf('/'), object.src[object.src.length-1]) == "mont1.jpg") {
+    if(object.dataset.state="1") {
+      object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont2.jpg";
+      object.dataset.state = 2;
     } else {
-      this.src = this.src.substring(0,this.src.lastIndexOf('/')+1) + "mont1.jpg";
-      this.dataset.state = 1;
+      object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont1.jpg";
+      object.dataset.state = 1;
     }
   });
 });
