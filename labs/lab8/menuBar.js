@@ -27,9 +27,9 @@ $(document).ready(function() {
 
   document.getElementById('monty').addEventListener("click", function() {
     if(this.src.substring(this.src.lastIndexOf('/'), this.src[this.src.length-1]) == "mont1.jpg") {
-      this.src = this.src.substring(this.src.lastIndexOf('/')) + "mont2.jpg";
+      this.src = this.src.substring(0,this.src.lastIndexOf('/')) + "mont2.jpg";
     } else {
-      this.src = this.src.substring(this.src.lastIndexOf('/')) + "mont1.jpg";
+      this.src = this.src.substring(0,this.src.lastIndexOf('/')) + "mont1.jpg";
 
     }
   });
