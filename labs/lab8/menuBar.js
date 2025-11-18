@@ -24,11 +24,11 @@ $(document).ready(function() {
   // alert("past Ajax");
 
 
-  document.getElementsByClassName('monty').forEach(function(object) {
+  document.querySelectorAll('.monty').forEach(function(object) {
     object.addEventListener("click", function() {
-    alert(object.src.substring(object.src[object.src.length-10], object.src[object.src.length-1]));
+    // alert(object.src.substring(object.src[object.src.length-10], object.src[object.src.length-1]));
     // if(object.src.substring(object.src.lastIndexOf('/'), object.src[object.src.length-1]) == "mont1.jpg") {
-    if(object.dataset.state="1") {
+    if(object.dataset.state=="1") {
       object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont2.jpg";
       object.dataset.state = 2;
     } else {
