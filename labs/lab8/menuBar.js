@@ -29,10 +29,10 @@ $(document).ready(function() {
       // alert(object.src.substring(object.src[object.src.length-10], object.src[object.src.length-1]));
       // if(object.src.substring(object.src.lastIndexOf('/'), object.src[object.src.length-1]) == "mont1.jpg") {
       if(object.dataset.state=="1") {
-        object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont2.jpg";
+        object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont1.jpg";
         object.dataset.state = 2;
       } else {
-        object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont1.jpg";
+        object.src = object.src.substring(0,object.src.lastIndexOf('/')+1) + "mont2.jpg";
         object.dataset.state = 1;
       }
     });
