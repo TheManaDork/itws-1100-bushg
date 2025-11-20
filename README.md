@@ -11,3 +11,6 @@ Professor Password: ITProf920@
 
 Working link to my website (when azure is running it ofc):
 http://bushgrpi.eastus.cloudapp.azure.com/iit/index.html
+
+
+LAB8: To see what I implemented for the suggestion that we "*jazz-up*" our website, try clicking the various cat photos.

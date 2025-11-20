@@ -1,0 +1,45 @@
+{
+  "GRAYDON BUSH - HOME": [
+    {
+      "title": "Labs",
+      "link": "./labs/index.html"
+    },
+    {
+      "title": "Resume",
+      "link": "./labs/lab2/bushg-GraydonBush-resume.html"
+      
+    },
+    {
+      "title": "Contact",
+      "link": "./labs/lab5/index.html"
+      
+    },
+    {
+      "title": "Resources",
+      "link": "./resources/index.html"
+      
+    }
+  ],
+  "GRAYDON BUSH - LABS": [
+    {
+      "title": "LAB1",
+      "link": "./labs/lab1/index.html"
+    },
+    {
+      "title": "LAB2",
+      "link": "./labs/lab2/index.html"
+    },
+    {
+      "title": "LAB3",
+      "link": "./labs/lab3/index.html"
+    },
+    {
+      "title": "LAB4",
+      "link": "./labs/lab4/index.html"
+    },
+    {
+      "title": "LAB5",
+      "link": "./labs/lab5/index.html"
+    }
+  ]
+}
