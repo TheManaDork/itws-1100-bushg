@@ -9,8 +9,8 @@ if ($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == 'localhost:
    $GLOBALS['HOSTNAME'] = 'localhost';
    $GLOBALS['DB_NAME']  = 'iit';
    $GLOBALS['DB_HOST']  = 'localhost';
-   $GLOBALS['DB_USERNAME'] = 'bushg@rpi.edu'`;
-   $GLOBALS['DB_PASSWORD'] = 'f7BnKTaf';
+   $GLOBALS['DB_USERNAME'] = 'root';
+   $GLOBALS['DB_PASSWORD'] = 'root';
 } else {
    // Production/Azure server settings
    // NOTE: Update these credentials for your production environment
