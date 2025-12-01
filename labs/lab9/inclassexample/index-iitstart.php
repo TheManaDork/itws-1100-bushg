@@ -34,7 +34,7 @@
   // Now let's process our form:
   // Have we posted?
   $havePost = isset($_POST["save"]);
-
+  alert("Check: "+$havePost);
   // Let's do some basic validation
   $errors = '';
   if ($havePost) {
