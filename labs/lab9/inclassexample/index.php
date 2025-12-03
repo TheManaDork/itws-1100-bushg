@@ -3,7 +3,7 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-echo "<h1>DEBUG MODE</h1>";
+// echo "<h1>DEBUG MODE</h1>";
 include('includes/init.inc.php'); // include the DOCTYPE and opening tags
 include('includes/config.inc.php'); // database configuration
 include('includes/functions.inc.php'); // functions
