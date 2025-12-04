@@ -95,6 +95,9 @@ if($havePost) {
       echo '<script>console.log(`';
       echo print_r($db);
       echo '`);</script>';
+
+      // construct table
+      echo '<tr><th>Title</th><th>Year</th></tr>';
     }
   ?>
 </table>
