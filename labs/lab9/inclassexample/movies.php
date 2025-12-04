@@ -60,7 +60,7 @@ if($havePost) {
       echo "Proceding to input input to table";
 
       $titleInput = trim($_POST["title"]);
-      $yearInput = trim($_POST["title"]);
+      $yearInput = trim($_POST["year"]);
       $insQuery = "INSERT INTO movies (title, year) VALUES (?, ?)";
       $statement = $db->prepare($insQuery);
       $statement->bind_param("ss", $title, $year);
@@ -119,7 +119,7 @@ if($havePost) {
         }
         echo '<td>' . htmlspecialchars($row['title']) . '</td>';
         echo '<td>' . htmlspecialchars($row['year']) . '</td>';
-        echo '<td> <img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/> </td>'; 
+        echo '<td> <img src="resources/delete.png" class="deleteRow" width="16" height="16" alt="delete movie"/> </td>'; 
         echo "\n" . '</tr>';
       }
     }
