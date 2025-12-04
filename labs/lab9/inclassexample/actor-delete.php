@@ -15,14 +15,13 @@
   } else {
     if (isset($_POST["id"])) {
       // get our id and cast as an integer
-      $rowId = (int) $_POST["id"];
-      $table = $_POST["table"];
-
+      $actorId = (int) $_POST["id"];
+      
       // Setup a prepared statement. 
-      $query = "delete from ".$table."s where rowId = ?";
+      $query = "delete from actors where actorid = ?";
       $statement = $db->prepare($query);
       // bind our variable to the question mark
-      $statement->bind_param("i",$rowId);
+      $statement->bind_param("i",$actorId);
       // make it so:
       $statement->execute();
       
