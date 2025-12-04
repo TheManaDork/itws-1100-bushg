@@ -24,7 +24,7 @@
       } else if($_POST["table"] == "movies") {
         $query = "delete from movies where actorid = ?";
       } else {
-        echo '<script>console.log("Error in actor-delete.php: Table not found.);</script>';
+        echo '<script>console.log("Error in actor-delete.php: Table not found.");</script>';
       }
       $statement = $db->prepare($query);
       // bind our variable to the question mark
