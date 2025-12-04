@@ -1,7 +1,10 @@
 <?php
+
   /* Delete an actor */
   ini_set('display_errors', 1);
-
+  ob_clean();
+  header("Content-Encoding: identity");
+  header("Content-Type: application/json; charset=utf-8");
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
   $db = new mysqli('localhost', 'root', 'root', 'iit');
