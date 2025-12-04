@@ -19,6 +19,8 @@
       $table = $_POST["table"];
       if($table != "actors" && $table != "movies") {
         echo '<script>console.log("Error in actor-delete.php: Invalid table");</script>';
+      } else {
+        echo '<script>console.log("Table is '.$table.'");</script>';
       }
       // Setup a prepared statement. 
       $query = "delete from ".$table."s where rowId = ?";
