@@ -49,7 +49,7 @@ $(document).ready(function() {
       // Extract the db id of the actor from the dom id of the clicked element
       var rowId = curId.substr(curId.indexOf("-")+1);
       // Build the data to send. 
-      var postData = "{'id':" + rowId + ", 'table':" + tableName + "}";
+      var postData = "{'id':" + rowId + ", 'table':'" + tableName + "s'}";
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
       // var postData = { "id" : actorId };
