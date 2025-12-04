@@ -18,10 +18,13 @@
       $actorId = (int) $_POST["id"];
       
       // Setup a prepared statement. 
+      $query = "";
       if($_POST["table"] == "actors") {
         $query = "delete from actors where actorid = ?";
       } else if($_POST["table"] == "movies") {
         $query = "delete from movies where actorid = ?";
+      } else {
+        //help
       }
       $statement = $db->prepare($query);
       // bind our variable to the question mark

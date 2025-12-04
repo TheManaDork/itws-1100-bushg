@@ -56,6 +56,7 @@ $(document).ready(function() {
         "id": rowId,
         "table": tableName
       };
+      console.log(postData["table"]);
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
       // var postData = { "id" : actorId };
