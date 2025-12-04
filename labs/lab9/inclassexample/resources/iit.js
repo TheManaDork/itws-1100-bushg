@@ -42,6 +42,8 @@ $(document).ready(function() {
     console.log("first element not focused");
     tableName = 'movies';
     rowName = 'movie';
+  } else {
+    console.log("ERROR: table type not found");
   }
      
   $(".deleteRow").click(function() {
