@@ -17,6 +17,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 $dbOk = false;
 $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
@@ -38,7 +39,8 @@ if($havePost) {
   $errors = '';
   if($title == '') {
     $errors .= '<li>Title may not be blank</li>';
-  } else if($year == '') {
+  }
+  if($year == '') {
     $errors .= '<li>Year may not be blank</li>';
   }
   if ($errors != '') {
@@ -65,11 +67,11 @@ if($havePost) {
 
 <p>Build the movie forms and output here.</p>
 
-<form id="addForm" name="addForm" actions="index.php" method="post" onsubmit="return validateMovieForm(this);">
+<form id="addForm" name="addForm" action="index.php" method="post" onsubmit="return validateMovieForm(this);">
   <!-- <h1>This is where the form is.</h1> -->
   <input type="text" name="title" value="WW2">
   <input type="text" name="year" value="1936">
-  <input type="submit" value="Submit">
+  <input type="submit" name="save" value="Submit">
 </form>
 
 <h3>Movies</h3>
