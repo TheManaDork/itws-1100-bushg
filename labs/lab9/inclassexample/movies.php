@@ -4,6 +4,13 @@
 ?>
 <title>PHP &amp; MySQL - ITWS</title>   
 
+<?php include('includes/head.inc.php'); ?>
+
+<h1>PHP &amp; MySQL</h1>
+      
+<?php include('includes/menubody.inc.php'); ?>
+
+
 <!-- Here we will access the db -->
 <?php
 
@@ -17,11 +24,6 @@ if($db->connect_errno) {
 
 ?>
 
-<?php include('includes/head.inc.php'); ?>
-
-<h1>PHP &amp; MySQL</h1>
-      
-<?php include('includes/menubody.inc.php'); ?>
 
 <p>Build the movie forms and output here.</p>
 
