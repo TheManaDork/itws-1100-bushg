@@ -31,6 +31,7 @@ function validateMovieForm(formObj) {
 $(document).ready(function() {
   
   // focus the name field on first load of the page
+  console.log(document.documentURI);
   $("#firstNames").focus();
      
   $(".deleteActor").click(function() {
@@ -86,5 +87,8 @@ $(document).ready(function() {
       
     }
   });
+
+
+  
   
 });
