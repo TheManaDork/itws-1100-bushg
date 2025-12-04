@@ -3,7 +3,7 @@
   
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-  @ $db = new mysqli('localhost', 'root', 'root', 'iit');
+  $db = new mysqli('localhost', 'root', 'root', 'iit');
   
   if ($db->connect_error) {
     $connectErrors = array(
@@ -17,7 +17,9 @@
       // get our id and cast as an integer
       $rowId = (int) $_POST["id"];
       $table = $_POST["table"];
-
+      if($table != "actors" && $table != "movies") {
+        echo '<script>console.log("Error in actor-delete.php: Invalid table");</script>';
+      }
       // Setup a prepared statement. 
       $query = "delete from ".$table."s where rowId = ?";
       $statement = $db->prepare($query);
