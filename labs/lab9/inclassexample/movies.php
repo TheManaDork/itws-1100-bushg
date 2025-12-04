@@ -51,6 +51,8 @@ if($havePost) {
 
       echo "<h3>Proceding to input input to table<h3>";
       // console.log("Proceding to input input to table");
+    } else {
+      echo '$dbOk !true';
     }
    }
 }
