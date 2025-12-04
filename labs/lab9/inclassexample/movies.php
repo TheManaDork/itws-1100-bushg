@@ -61,7 +61,7 @@ if($havePost) {
 
       $titleInput = trim($_POST["title"]);
       $yearInput = trim($_POST["title"]);
-
+      
 
     } else {
       echo '$dbOk !true';
@@ -88,6 +88,12 @@ if($havePost) {
 <table id="movieTable">
   <?php
     // load the db
+    if($dbOk) {
+      $data = $db->query("SELECT ROW FROM movies");
+      echo '<script>console.log("movies database:" + `';
+      echo 'print_r($db)';
+      echo '`)<\script>';
+    }
   ?>
 </table>
 
