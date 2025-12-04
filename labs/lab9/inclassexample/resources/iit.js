@@ -22,20 +22,54 @@ function validate(formObj) {
 }
 
 
+function validateMovieForm(formObj) {
+  if (formObj.title.value == "") {
+    alert("Please enter a title");
+    formObj.title.focus();
+    return false;
+  }
+  
+  if (formObj.year.value == "") {
+    alert("Please enter a year");
+    formObj.year.focus();
+    return false;
+  }
+  return true;
+}
+
+
 $(document).ready(function() {
   
   // focus the name field on first load of the page
-  $("#firstNames").focus();
+  console.log(document.documentURI);
+  var tableName = '';
+  var rowName = '';
+  console.log("file name = " + document.documentURI.split("/")[document.documentURI.split("/").length - 1]);
+  if(document.documentURI.split("/")[document.documentURI.split("/").length - 1] == "index.php") {
+    $("#firstNames").focus();
+    tableName = 'actors';
+    rowName = 'actor';
+  } else if(document.documentURI.split("/")[document.documentURI.split("/").length - 1] == "movies.php") {
+    console.log("first element not focused");
+    tableName = 'movies';
+    rowName = 'movie';
+  } else {
+    console.log("ERROR: table type not found");
+  }
      
-  $(".deleteActor").click(function() {
-    if(confirm("Remove actor? (This action cannot be undone.)")) {
+  $(".deleteRow").click(function() {
+    if(confirm("Remove "+rowName+"? (This action cannot be undone.)")) {
       
       // get the id of the clicked element's row
       var curId = $(this).closest("tr").attr("id");
       // Extract the db id of the actor from the dom id of the clicked element
-      var actorId = curId.substr(curId.indexOf("-")+1);
+      var rowId = curId.substr(curId.indexOf("-")+1);
       // Build the data to send. 
-      var postData = "id=" + actorId;
+      var postData = {
+        "id": rowId,
+        "table": tableName
+      };
+      console.log(postData["table"]);
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
       // var postData = { "id" : actorId };
@@ -62,7 +96,7 @@ $(document).ready(function() {
             $("#jsMessages").html("<h4>Actor deleted</h4>").show();
             
             // re-zebra the table
-            $("#actorTable tr").each(function(i){
+            $("#"+rowName+"Table tr").each(function(i){
               if (i % 2 == 0) {
                 // we must compensate for the header row...
                 $(this).addClass("odd"); 
@@ -80,5 +114,6 @@ $(document).ready(function() {
       
     }
   });
+  
   
 });

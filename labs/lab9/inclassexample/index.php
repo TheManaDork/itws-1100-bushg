@@ -1,4 +1,7 @@
 <?php
+// Apache gets angry when it tries to process the 'no actors.php' error
+ini_set('display_errors', 1);
+
 include('includes/init.inc.php'); // include the DOCTYPE and opening tags
 include('includes/config.inc.php'); // database configuration
 include('includes/functions.inc.php'); // functions
@@ -23,7 +26,7 @@ $dbOk = false;
 
 /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-@$db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
+$db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
 if ($db->connect_error) {
    echo '<div class="messages">Could not connect to the database. Error: ';
@@ -94,7 +97,7 @@ if ($havePost) {
 
          // Setup a prepared statement. Alternately, we could write an insert statement - but
          // *only* if we escape our data using addslashes() or (better) mysqli_real_escape_string().
-         $insQuery = "insert into actors (`last_name`,`first_names`,`dob`) values(?,?,?)";
+         $insQuery = "insert into actors (`last_name`,`first_name`,`dob`) values(?,?,?)";
          $statement = $db->prepare($insQuery);
          // bind our variables to the question marks
          $statement->bind_param("sss", $lastNameForDb, $firstNamesForDb, $dobForDb);
@@ -138,7 +141,7 @@ if ($havePost) {
 </form>
 
 <h3>Actors</h3>
-<table id="actorTable">
+<table id="formTable">
    <?php
    if ($dbOk) {
 
@@ -155,11 +158,11 @@ if ($havePost) {
             echo "\n" . '<tr class="odd" id="actor-' . $record['actorid'] . '"><td>';
          }
          echo htmlspecialchars($record['last_name']) . ', ';
-         echo htmlspecialchars($record['first_names']);
+         echo htmlspecialchars($record['first_name']);
          echo '</td><td>';
          echo htmlspecialchars($record['dob']);
          echo '</td><td>';
-         echo '<img src="resources/delete.png" class="deleteActor" width="16" height="16" alt="delete actor"/>';
+         echo '<img src="resources/delete.png" class="deleteRow" width="16" height="16" alt="delete actor"/>';
          echo '</td></tr>';
          // Uncomment the following three lines to see the underlying
          // associative array for each record.
