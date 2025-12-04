@@ -106,8 +106,9 @@ if($havePost) {
         } else {
           echo "\n" . '<tr class="odd" id="movie">';
         }
-        echo '<td>' . $row['title'] . '</td>';
-        echo '<td>' . $row['year'] . '</td>';
+        echo '<td>' . htmlspecialchars($row['title']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['year']) . '</td>';
+        echo '<td> <img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/> </td>'; 
         echo "\n" . '</tr>';
       }
     }
