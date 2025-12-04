@@ -33,16 +33,19 @@ $(document).ready(function() {
   // focus the name field on first load of the page
   console.log(document.documentURI);
   var tableName = '';
+  var rowName = '';
   if(document.documentURI.split("/")[document.documentURI.length - 1] == "index.php") {
     $("#firstNames").focus();
-    tableName = 'actor';
+    tableName = 'actors';
+    rowName = 'actor';
   } else if(document.documentURI.split("/")[document.documentURI.length - 1] == "movies.php") {
     console.log("first element not focused");
-    tableName = 'movie';
+    tableName = 'movies';
+    rowName = 'movie';
   }
      
   $(".deleteRow").click(function() {
-    if(confirm("Remove "+tableName+"? (This action cannot be undone.)")) {
+    if(confirm("Remove "+rowName+"? (This action cannot be undone.)")) {
       
       // get the id of the clicked element's row
       var curId = $(this).closest("tr").attr("id");
@@ -50,8 +53,8 @@ $(document).ready(function() {
       var rowId = curId.substr(curId.indexOf("-")+1);
       // Build the data to send. 
       var postData = {
-        id:rowId,
-        table: (tableName + "s")
+        "id": rowId,
+        "table": tableName
       };
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
@@ -79,7 +82,7 @@ $(document).ready(function() {
             $("#jsMessages").html("<h4>Actor deleted</h4>").show();
             
             // re-zebra the table
-            $("#"+tableName+"Table tr").each(function(i){
+            $("#"+rowName+"Table tr").each(function(i){
               if (i % 2 == 0) {
                 // we must compensate for the header row...
                 $(this).addClass("odd"); 
