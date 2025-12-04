@@ -102,10 +102,11 @@ if($havePost) {
       for($i = 0; $i < $size; $i++) {
         $row = $data->fetch_assoc();
         if($i%2 == 0) {
-          echo "\n" . '<tr id=movie></tr>';
+          echo "\n" . '<tr id=movie>';
         }
-
-
+        echo '<td>' . $row['title'] . '</td>';
+        echo '<td>' . $row['year'] . '</td>';
+        echo "\n" . '</tr>';
       }
     }
   ?>
