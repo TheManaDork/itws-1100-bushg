@@ -21,7 +21,7 @@ if($db->connect_errno) {
   echo 'failed to connect to MySQL:' . $db->connect_error;
 }  else {
   $dbOk = true;
-  // echo "connected to db!";
+  echo "connected to db!";
 }
 
 // check for input:
@@ -48,7 +48,7 @@ if($havePost) {
       echo '  });';
       echo '</script>';
    } else {
-    if($dbOk) {
+    if($dbOk == true) {
 
       echo "<h3>Proceding to input input to table<h3>";
       console.log("Proceding to input input to table");
