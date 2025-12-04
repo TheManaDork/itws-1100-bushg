@@ -89,9 +89,10 @@ if($havePost) {
   <?php
     // load the db
     if($dbOk) {
+                            /// GRAYDON!!!: Finish parsing this, figure out how tables work, then get back to allowing the inputting of new movies
       $data = $db->query("SELECT * FROM movies");
-      echo '<script>console.log("movies database:" + `';
-      echo 'print_r($db)';
+      echo '<script>console.log(`';
+      echo print_r($db);
       echo '`)<\script>';
     }
   ?>
