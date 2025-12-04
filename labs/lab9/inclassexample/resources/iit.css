@@ -142,7 +142,7 @@ td {
   background-color: #eed;
   color: black;
 }
-.deleteActor {
+.deleteRow {
   cursor: pointer;
 }
 
@@ -162,9 +162,6 @@ td {
 #movieTable tr.odd td {
   background-color: #eed;
   color: black;
-}
-.deleteMovie {
-  cursor: pointer;
 }
 
 .boxedContent {
