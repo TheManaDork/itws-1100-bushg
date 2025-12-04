@@ -89,7 +89,7 @@ if($havePost) {
   <?php
     // load the db
     if($dbOk) {
-      $data = $db->query("SELECT ROW FROM movies");
+      $data = $db->query("SELECT * FROM movies");
       echo '<script>console.log("movies database:" + `';
       echo 'print_r($db)';
       echo '`)<\script>';
