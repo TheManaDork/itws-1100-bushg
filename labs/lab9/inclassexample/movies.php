@@ -93,9 +93,9 @@ if($havePost) {
       echo '<script>console.log("Movies:");</script>';
       $data = $db->query("SELECT * FROM movies ORDER BY title");
       $size = $data->num_rows;
-      echo '<script>console.log(`';
-      echo print_r($db);
-      echo '`);</script>';
+      // echo '<script>console.log(`';
+      // echo print_r($db);
+      // echo '`);</script>';
 
       // construct table
       echo '<tr><th>Title</th><th>Year</th><th></th></tr>';
