@@ -24,7 +24,7 @@
         // echo '<script>console.log("Table is '.$table.'");</script>';
       }
       // Setup a prepared statement. 
-      $query = "delete from ".$table."s where rowId = ?";
+      $query = "delete from ".$table." where rowId = ?";
       $statement = $db->prepare($query);
       // bind our variable to the question mark
       $statement->bind_param("i",$rowId);
