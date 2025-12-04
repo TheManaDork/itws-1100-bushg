@@ -7,7 +7,7 @@
 <!-- Here we will access the db -->
 <?php
 
-@$db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
+$db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
 if($db->connect_errno) {
   echo 'failed to connect to MySQL:' . $db->connect_error;
