@@ -79,8 +79,7 @@ if($havePost) {
 ?>
 
 
-<p>Build the movie forms and output here.</p>
-
+<h3>Add Movie</h3>
 <form id="addForm" name="addForm" action="movies.php" method="post" onsubmit="return validateMovieForm(this);">
   <fieldset>
     <!-- <h1>This is where the form is.</h1> -->
