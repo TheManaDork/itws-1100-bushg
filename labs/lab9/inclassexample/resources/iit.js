@@ -23,7 +23,17 @@ function validate(formObj) {
 
 
 function validateMovieForm(formObj) {
-  console.log("ERROR: validateMovieForm unimplemented");  
+  if (formObj.title.value == "") {
+    alert("Please enter a title");
+    formObj.title.focus();
+    return false;
+  }
+  
+  if (formObj.year.value == "") {
+    alert("Please enter a year");
+    formObj.year.focus();
+    return false;
+  }
   return true;
 }
 
