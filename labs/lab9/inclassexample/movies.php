@@ -102,7 +102,7 @@ if($havePost) {
 
 <h3>Movies</h3>
 
-<table id="movieTable">
+<table id="formTable">
   <?php
     // load the db
     if($dbOk) {

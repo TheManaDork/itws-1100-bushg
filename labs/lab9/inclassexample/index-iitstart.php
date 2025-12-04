@@ -131,7 +131,7 @@
 </form>
 
 <h3>Actors</h3>
-<table id="actorTable">
+<table id="formTable">
 <?php
   if ($dbOk) {
 

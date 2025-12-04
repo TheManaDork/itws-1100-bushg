@@ -126,19 +126,19 @@ th {
 td {
   padding-right: 1em;
 }
-#actorTable {
+#formTable {
   width: 100%;
   border-spacing: 0;
   border: 1px solid #333;
 }
-#actorTable th {
+#formTable th {
   background-color: #ddc;
   padding: 2px 4px;
 }
-#actorTable td {
+#formTable td {
   padding: 2px 4px;
 }
-#actorTable tr.odd td {
+#formTable tr.odd td {
   background-color: #eed;
   color: black;
 }
@@ -147,22 +147,6 @@ td {
 }
 
 
-#movieTable {
-  width: 100%;
-  border-spacing: 0;
-  border: 1px solid #333;
-}
-#movieTable th {
-  background-color: #ddc;
-  padding: 2px 4px;
-}
-#movieTable td {
-  padding: 2px 4px;
-}
-#movieTable tr.odd td {
-  background-color: #eed;
-  color: black;
-}
 
 .boxedContent {
   margin: 0;
