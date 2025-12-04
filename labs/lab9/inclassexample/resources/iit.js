@@ -22,6 +22,12 @@ function validate(formObj) {
 }
 
 
+function validateMovieForm(formObj) {
+  console.log("ERROR: validateMovieForm unimplemented");  
+  return true;
+}
+
+
 $(document).ready(function() {
   
   // focus the name field on first load of the page
