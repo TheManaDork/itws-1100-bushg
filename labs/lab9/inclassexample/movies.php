@@ -84,10 +84,10 @@ if($havePost) {
 <form id="addForm" name="addForm" action="movies.php" method="post" onsubmit="return validateMovieForm(this);">
   <fieldset>
     <!-- <h1>This is where the form is.</h1> -->
-    <label class="field" for="title">Title:</label>
-    <input type="text" name="title" value="<?php if ($havePost && $errors != '') { echo $title; } ?>">
-    <label class="field" for="year">Year:</label>
-    <input type="text" name="year" value="<?php if ($havePost && $errors != '') { echo $year; } ?>">
+    <div><label class="field" for="title">Title:</label>
+    <input type="text" name="title" value="<?php if ($havePost && $errors != '') { echo $title; } ?>"></div>
+    <div><label class="field" for="year">Year:</label>
+    <input type="text" name="year" value="<?php if ($havePost && $errors != '') { echo $year; } ?>"></div>
     <input type="submit" name="save" value="Submit">
   </fieldset>
 </form>
