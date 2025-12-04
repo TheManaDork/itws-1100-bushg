@@ -22,10 +22,10 @@ $dbOk = false;
 $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
 if($db->connect_errno) {
-  echo '<script>console.log(failed to connect to MySQL:' . $db->connect_error . ');</script>';
+  echo '<script>console.log("failed to connect to MySQL:' . $db->connect_error . '");</script>';
 }  else {
   $dbOk = true;
-  echo "<script>console.log(connected to db!);</script>";
+  echo '<script>console.log("connected to db!");</script>';
 }
 
 // check for input:
@@ -33,9 +33,6 @@ $havePost = isset($_POST["save"]);
 
 // If we just got input:
 if($havePost) {
-  echo '<script>console.log(`';
-  echo  print_r($_POST);
-  echo ' `);</script>'; 
   $title = htmlspecialchars(trim($_POST["title"]));
   $year = htmlspecialchars(trim($_POST["year"]));
 
@@ -63,7 +60,7 @@ if($havePost) {
       $yearInput = trim($_POST["year"]);
       $insQuery = "INSERT INTO movies (title, year) VALUES (?, ?)";
       $statement = $db->prepare($insQuery);
-      $statement->bind_param("ss", $title, $year);
+      $statement->bind_param("ss", $titleInput, $yearInput);
       $statement->execute();
       echo '<div class="messages"><h4>Success: ' . $statement->affected_rows . ' movie added to database.</h4>';
          echo $titleInput . ', came out in ' . $yearInput . '</div>';
@@ -74,7 +71,6 @@ if($havePost) {
    }
 }
 
-// gay
 
 ?>
 
