@@ -50,7 +50,7 @@ if($havePost) {
     if($dbOk == true) {
 
       echo "<h3>Proceding to input input to table<h3>";
-      console.log("Proceding to input input to table");
+      // console.log("Proceding to input input to table");
     }
    }
 }
