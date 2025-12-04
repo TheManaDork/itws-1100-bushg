@@ -34,7 +34,7 @@ if($havePost) {
 
   $errors = '';
   if($title == '') {
-    $errrors .= '<li>Title may not be blank</li>';
+    $errors .= '<li>Title may not be blank</li>';
   } else if($year == '') {
     $errors .= '<li>Year may not be blank</li>';
   }
