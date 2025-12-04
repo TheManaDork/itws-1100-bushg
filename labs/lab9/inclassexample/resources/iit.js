@@ -35,11 +35,11 @@ $(document).ready(function() {
   var tableName = '';
   var rowName = '';
   console.log("file name = " + document.documentURI.split("/")[document.documentURI.split("/").length - 1]);
-  if(document.documentURI.split("/")[document.documentURI.length - 1] == "index.php") {
+  if(document.documentURI.split("/")[document.documentURI.split("/").length - 1] == "index.php") {
     $("#firstNames").focus();
     tableName = 'actors';
     rowName = 'actor';
-  } else if(document.documentURI.split("/")[document.documentURI.length - 1] == "movies.php") {
+  } else if(document.documentURI.split("/")[document.documentURI.split("/").length - 1] == "movies.php") {
     console.log("first element not focused");
     tableName = 'movies';
     rowName = 'movie';
