@@ -93,7 +93,7 @@ if($havePost) {
       $data = $db->query("SELECT * FROM movies");
       echo '<script>console.log(`';
       echo print_r($db);
-      echo '`)<\script>';
+      echo '`);<\script>';
     }
   ?>
 </table>
