@@ -1,13 +1,9 @@
 <?php
-
   /* Delete an actor */
-  ini_set('display_errors', 1);
-  ob_clean();
-  header("Content-Encoding: identity");
-  header("Content-Type: application/json; charset=utf-8");
+  
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-  $db = new mysqli('localhost', 'root', 'root', 'iit');
+  @ $db = new mysqli('localhost', 'root', 'root', 'iit');
   
   if ($db->connect_error) {
     $connectErrors = array(
@@ -19,18 +15,17 @@
   } else {
     if (isset($_POST["id"])) {
       // get our id and cast as an integer
-      $rowId = (int) $_POST["id"];
-      $table = $_POST["table"];
-      if($table != "actors" && $table != "movies") {
-        // echo '<script>console.log("Error in actor-delete.php: Invalid table");</script>';
-      } else {
-        // echo '<script>console.log("Table is '.$table.'");</script>';
-      }
+      $actorId = (int) $_POST["id"];
+      
       // Setup a prepared statement. 
-      $query = "delete from ".$table." where rowId = ?";
+      if($_POST["table"] == "actors") {
+        $query = "delete from actors where actorid = ?";
+      } else if($_POST["table"] == "movies") {
+        $query = "delete from movies where actorid = ?";
+      }
       $statement = $db->prepare($query);
       // bind our variable to the question mark
-      $statement->bind_param("i",$rowId);
+      $statement->bind_param("i",$actorId);
       // make it so:
       $statement->execute();
       
