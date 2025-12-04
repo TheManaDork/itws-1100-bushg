@@ -67,7 +67,7 @@ if($havePost) {
 
 <p>Build the movie forms and output here.</p>
 
-<form id="addForm" name="addForm" action="index.php" method="post" onsubmit="return validateMovieForm(this);">
+<form id="addForm" name="addForm" action="movies.php" method="post" onsubmit="return validateMovieForm(this);">
   <!-- <h1>This is where the form is.</h1> -->
   <input type="text" name="title" value="WW2">
   <input type="text" name="year" value="1936">

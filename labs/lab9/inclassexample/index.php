@@ -97,7 +97,7 @@ if ($havePost) {
 
          // Setup a prepared statement. Alternately, we could write an insert statement - but
          // *only* if we escape our data using addslashes() or (better) mysqli_real_escape_string().
-         $insQuery = "insert into actors (`last_name`,`first_name`,`dob`) values(?,?,?)";
+         $insQuery = "insert into actors (`last_name`,`first_names`,`dob`) values(?,?,?)";
          $statement = $db->prepare($insQuery);
          // bind our variables to the question marks
          $statement->bind_param("sss", $lastNameForDb, $firstNamesForDb, $dobForDb);
@@ -158,7 +158,7 @@ if ($havePost) {
             echo "\n" . '<tr class="odd" id="actor-' . $record['actorid'] . '"><td>';
          }
          echo htmlspecialchars($record['last_name']) . ', ';
-         echo htmlspecialchars($record['first_name']);
+         echo htmlspecialchars($record['first_names']);
          echo '</td><td>';
          echo htmlspecialchars($record['dob']);
          echo '</td><td>';
