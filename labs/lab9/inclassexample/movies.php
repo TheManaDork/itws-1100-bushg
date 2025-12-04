@@ -91,7 +91,7 @@ if($havePost) {
       </div>
       <div class="value">
         <label class="field" for="year">Year:</label>
-        <input type="text" name="year" placeholder="yyyy"> value="<?php if ($havePost && $errors != '') { echo $year; } ?>">
+        <input type="text" name="year" placeholder="yyyy" value="<?php if ($havePost && $errors != '') { echo $year; } ?>">
       </div>
       <input type="submit" name="save" value="Submit">
     </div>
