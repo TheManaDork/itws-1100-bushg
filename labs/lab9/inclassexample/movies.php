@@ -113,9 +113,9 @@ if($havePost) {
       for($i = 0; $i < $size; $i++) {
         $row = $data->fetch_assoc();
         if($i%2 == 0) {
-          echo "\n" . '<tr id="movie">';
+          echo "\n" . '<tr id="movie-' . $row['movieid'] . '">';
         } else {
-          echo "\n" . '<tr class="odd" id="movie">';
+          echo "\n" . '<tr class="odd" id="movie-' . $row['movieid'] . '">';
         }
         echo '<td>' . htmlspecialchars($row['title']) . '</td>';
         echo '<td>' . htmlspecialchars($row['year']) . '</td>';
