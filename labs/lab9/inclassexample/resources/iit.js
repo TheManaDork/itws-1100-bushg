@@ -34,7 +34,7 @@ $(document).ready(function() {
   console.log(document.documentURI);
   var tableName = '';
   var rowName = '';
-  console.log("file name = " + document.documentURI.split("/")[document.documentURI.length - 1]);
+  console.log("file name = " + document.documentURI.split("/")[document.documentURI.split("/").length - 1]);
   if(document.documentURI.split("/")[document.documentURI.length - 1] == "index.php") {
     $("#firstNames").focus();
     tableName = 'actors';
