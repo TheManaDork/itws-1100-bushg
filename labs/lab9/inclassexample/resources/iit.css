@@ -145,6 +145,28 @@ td {
 .deleteActor {
   cursor: pointer;
 }
+
+
+#movieTable {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid #333;
+}
+#movieTable th {
+  background-color: #ddc;
+  padding: 2px 4px;
+}
+#movieTable td {
+  padding: 2px 4px;
+}
+#movieTable tr.odd td {
+  background-color: #eed;
+  color: black;
+}
+.deleteMovie {
+  cursor: pointer;
+}
+
 .boxedContent {
   margin: 0;
   padding: 1em;

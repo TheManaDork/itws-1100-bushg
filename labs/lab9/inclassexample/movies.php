@@ -92,12 +92,21 @@ if($havePost) {
                             /// GRAYDON!!!: Finish parsing this, figure out how tables work, then get back to allowing the inputting of new movies
       echo '<script>console.log("Movies:");</script>';
       $data = $db->query("SELECT * FROM movies ORDER BY title");
+      $size = $data->num_rows;
       echo '<script>console.log(`';
       echo print_r($db);
       echo '`);</script>';
 
       // construct table
-      echo '<tr><th>Title</th><th>Year</th></tr>';
+      echo '<tr><th>Title</th><th>Year</th><th></th></tr>';
+      for($i = 0; $i < $size; $i++) {
+        $row = $data->fetch_assoc();
+        if($i%2 == 0) {
+          echo "\n" . '<tr id=movie></tr>';
+        }
+
+
+      }
     }
   ?>
 </table>
