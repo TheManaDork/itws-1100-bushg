@@ -82,11 +82,17 @@ if($havePost) {
 <p>Build the movie forms and output here.</p>
 
 <form id="addForm" name="addForm" action="movies.php" method="post" onsubmit="return validateMovieForm(this);">
-  <!-- <h1>This is where the form is.</h1> -->
-  <input type="text" name="title" value="WW2">
-  <input type="text" name="year" value="1936">
-  <input type="submit" name="save" value="Submit">
+  <fieldset>
+    <!-- <h1>This is where the form is.</h1> -->
+    <label class="field" for="title">Title:</label>
+    <input type="text" name="title" value="<?php if ($havePost && $errors != '') { echo $title; } ?>">
+    <label class="field" for="year">Year:</label>
+    <input type="text" name="year" value="<?php if ($havePost && $errors != '') { echo $year; } ?>">
+    <input type="submit" name="save" value="Submit">
+  </fieldset>
 </form>
+
+
 
 <h3>Movies</h3>
 
