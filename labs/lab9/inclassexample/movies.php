@@ -22,10 +22,10 @@ $dbOk = false;
 $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
 if($db->connect_errno) {
-  echo 'failed to connect to MySQL:' . $db->connect_error;
+  echo '<script>console.log(failed to connect to MySQL:' . $db->connect_error . ');</script>';
 }  else {
   $dbOk = true;
-  echo "connected to db!";
+  echo "<script>console.log(connected to db!);</script>";
 }
 
 // check for input:
@@ -61,10 +61,15 @@ if($havePost) {
 
       $titleInput = trim($_POST["title"]);
       $yearInput = trim($_POST["title"]);
-      
-
+      $insQuery = "INSERT INTO movies (title, year) VALUES (?, ?)";
+      $statement = $db->prepare($insQuery);
+      $statement->bind_param("ss", $title, $year);
+      $statement->execute();
+      echo '<div class="messages"><h4>Success: ' . $statement->affected_rows . ' movie added to database.</h4>';
+         echo $titleInput . ', came out in ' . $yearInput . '</div>';
+      $statement->close();
     } else {
-      echo '$dbOk !true';
+      echo '$dbOk not true!';
     }
    }
 }
