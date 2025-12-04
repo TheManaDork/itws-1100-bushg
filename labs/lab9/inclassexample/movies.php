@@ -54,13 +54,19 @@ if($havePost) {
    } else {
     if($dbOk == true) {
 
-      echo "<h3>Proceding to input input to table<h3>";
-      // console.log("Proceding to input input to table");
+      echo "Proceding to input input to table";
+
+      $titleInput = trim($_POST["title"]);
+      $yearInput = trim($_POST["title"]);
+
+
     } else {
       echo '$dbOk !true';
     }
    }
 }
+
+// gay
 
 ?>
 
