@@ -88,6 +88,7 @@ if($havePost) {
 <table id="movieTable">
   <?php
     // load the db
+    echo "<p>dbOk: $dbOk<\p>";
     if($dbOk) {
                             /// GRAYDON!!!: Finish parsing this, figure out how tables work, then get back to allowing the inputting of new movies
       echo '<script>console.log("Movies:");';
