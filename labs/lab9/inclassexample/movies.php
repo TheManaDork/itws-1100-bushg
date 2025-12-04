@@ -44,7 +44,6 @@ if($havePost) {
       echo '</ul></div>';
       echo '<script type="text/javascript">';
       echo '  $(document).ready(function() {';
-      echo '    $("' . $focusId . '").focus();';
       echo '  });';
       echo '</script>';
    } else {
