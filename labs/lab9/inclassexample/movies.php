@@ -61,6 +61,9 @@ if($havePost) {
 
 <form id="addForm" name="addForm" actions="index.php" method="post" onsubmit="return validateMoveForm(this);">
   <h1>This is where the form is.</h1>
+  <input type="text" name="title" value="WW2">
+  <input type="text" name="year" value="1936">
+  <input type="submit" value="Submit">
 </form>
 
 <h3>Movies</h3>
