@@ -91,7 +91,7 @@ if($havePost) {
     if($dbOk) {
                             /// GRAYDON!!!: Finish parsing this, figure out how tables work, then get back to allowing the inputting of new movies
       echo '<script>console.log("Movies:");</script>';
-      $data = $db->query("SELECT * FROM movies");
+      $data = $db->query("SELECT * FROM movies ORDER BY title");
       echo '<script>console.log(`';
       echo print_r($db);
       echo '`);</script>';
