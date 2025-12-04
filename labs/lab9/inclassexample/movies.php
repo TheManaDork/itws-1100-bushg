@@ -14,13 +14,44 @@
 
 <!-- Here we will access the db -->
 <?php
-
+$dbOk = false;
 $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
 
 if($db->connect_errno) {
   echo 'failed to connect to MySQL:' . $db->connect_error;
 }  else {
-  echo "connected to db!";
+  $dbOk = true;
+  // echo "connected to db!";
+}
+
+// check for input:
+$havePost = isset($_POST["save"]);
+
+// If we just got input:
+if($havePost) {
+  $title = htmlspecialchars(trim($_POST["title"]));
+  $year = htmlspecialchars(trim($_POST["year"]));
+
+  $errors = '';
+  if($title == '') {
+    $errrors .= '<li>Title may not be blank</li>';
+  } else if($year == '') {
+    $errors .= '<li>Year may not be blank</li>';
+  }
+  if ($errors != '') {
+      echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+      echo $errors;
+      echo '</ul></div>';
+      echo '<script type="text/javascript">';
+      echo '  $(document).ready(function() {';
+      echo '    $("' . $focusId . '").focus();';
+      echo '  });';
+      echo '</script>';
+   } else {
+    if($dbOk) {
+      echo "Proceding to input input to table";
+    }
+   }
 }
 
 ?>
@@ -36,7 +67,7 @@ if($db->connect_errno) {
 
 <table id="movieTable">
   <?php
-    
+    // load the db
   ?>
 </table>
 
