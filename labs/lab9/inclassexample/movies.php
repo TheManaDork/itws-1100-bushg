@@ -33,9 +33,9 @@ $havePost = isset($_POST["save"]);
 
 // If we just got input:
 if($havePost) {
-  echo '<script>console.log(\'';
+  echo '<script>console.log(`';
   echo  print_r($_POST);
-  echo ' \');</script>'; 
+  echo ' `);</script>'; 
   $title = htmlspecialchars(trim($_POST["title"]));
   $year = htmlspecialchars(trim($_POST["year"]));
 
