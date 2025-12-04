@@ -1,5 +1,5 @@
 <?php
-  /* Delete a row */
+  /* Delete an actor */
   
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
@@ -15,20 +15,20 @@
   } else {
     if (isset($_POST["id"])) {
       // get our id and cast as an integer
-      $rowId = (int) $_POST["id"];
+      $actorId = (int) $_POST["id"];
       
       // Setup a prepared statement. 
       $query = "";
       if($_POST["table"] == "actors") {
-        $query = "delete from actors where rowId = ?";
+        $query = "delete from actors where actorid = ?";
       } else if($_POST["table"] == "movies") {
-        $query = "delete from movies where rowId = ?";
+        $query = "delete from movies where actorid = ?";
       } else {
-        //help
+
       }
       $statement = $db->prepare($query);
       // bind our variable to the question mark
-      $statement->bind_param("i",$rowId);
+      $statement->bind_param("i",$actorId);
       // make it so:
       $statement->execute();
       
