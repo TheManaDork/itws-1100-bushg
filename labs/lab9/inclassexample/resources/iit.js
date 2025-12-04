@@ -32,17 +32,24 @@ $(document).ready(function() {
   
   // focus the name field on first load of the page
   console.log(document.documentURI);
-  $("#firstNames").focus();
+  var tableName = '';
+  if(document.documentURI.split("/")[document.documentURI.length - 1] == "index.php") {
+    $("#firstNames").focus();
+    tableName = 'actor';
+  } else if(document.documentURI.split("/")[document.documentURI.length - 1] == "movies.php") {
+    console.log("first element not focused");
+    tableName = 'movie';
+  }
      
-  $(".deleteActor").click(function() {
-    if(confirm("Remove actor? (This action cannot be undone.)")) {
+  $(".deleteRow").click(function() {
+    if(confirm("Remove "+tableName+"? (This action cannot be undone.)")) {
       
       // get the id of the clicked element's row
       var curId = $(this).closest("tr").attr("id");
       // Extract the db id of the actor from the dom id of the clicked element
-      var actorId = curId.substr(curId.indexOf("-")+1);
+      var rowId = curId.substr(curId.indexOf("-")+1);
       // Build the data to send. 
-      var postData = "id=" + actorId;
+      var postData = "{'id':" + rowId + ", 'table':" + tableName + "}";
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
       // var postData = { "id" : actorId };
@@ -69,7 +76,7 @@ $(document).ready(function() {
             $("#jsMessages").html("<h4>Actor deleted</h4>").show();
             
             // re-zebra the table
-            $("#actorTable tr").each(function(i){
+            $("#"+tableName+"Table tr").each(function(i){
               if (i % 2 == 0) {
                 // we must compensate for the header row...
                 $(this).addClass("odd"); 
@@ -87,8 +94,6 @@ $(document).ready(function() {
       
     }
   });
-
-
   
   
 });
