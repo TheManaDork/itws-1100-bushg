@@ -9,6 +9,8 @@
 <h1>PHP &amp; MySQL</h1>
       
 <?php include('includes/menubody.inc.php'); ?>
+<form id="addForm" name="addForm" actions="index.php" method="post" onsubmit="return validate(this);">
+</form>
 
 <p>Build the movie forms and output here.</p>
 
