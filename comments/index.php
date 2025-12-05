@@ -127,7 +127,7 @@ use App\Enums\Status;
           <label for="comments" class="field"><h3>Comment</h3></label>
           <div class="value"><textarea rows="4" cols="40" name="comment" id="comment" placeholder="Please enter your Comments"></textarea></div>
 
-          <input type="submit" value="save" id="save" name="save" />
+          <input type="submit" value="Send" id="save" name="save" />
        </fieldset>
       </form>
       <table id="actorTable">
