@@ -4,7 +4,7 @@
   <head>
       <title>GRAYDON BUSH - LAB 5</title>
       <link rel="stylesheet" href="/iit/resources/nav-pages.css">
-      <script type="text/javascript" src="lab5.js"></script>
+      <script type="text/javascript" src="comments.js"></script>
   </head>
   <body>
     <div id="nav-bar">
@@ -26,8 +26,8 @@
           <label for="email" class="field"><h3>Email</h3></label>
           <div class="value"><input type="text" size="60" value="Please enter your email" name="email" id="email" /></div>
 
-          <label for="comments" class="field"><h3>Comments</h3></label>
-          <div class="value"><textarea rows="4" cols="40" name="comments" id="comments">Please enter your Comments</textarea></div>
+          <label for="comments" class="field"><h3>Comment</h3></label>
+          <div class="value"><textarea rows="4" cols="40" name="comment" id="comment">Please enter your Comments</textarea></div>
 
           <input type="submit" value="save" id="save" name="save" />
        </fieldset>
