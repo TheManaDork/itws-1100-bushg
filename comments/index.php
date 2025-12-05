@@ -83,7 +83,7 @@ use App\Enums\Status;
       <h1><a href="../"><-Intro to ITWS</a> <===> Comments</h1>
     </div>
     <div id="page-trifurcation">
-      <img  style="max-width: 20%;" class="page-item monty" data-set="1" src="/iit/resources/images/mont1.jpg" alt="pic of my cat">
+      <!-- <img  style="max-width: 20%;" class="page-item monty" data-set="1" src="/iit/resources/images/mont1.jpg" alt="pic of my cat"> -->
       <div class="textbox page-item">
       <h3>Welcome to my comments section!</h3>
       <h3>Please politely join the convo!</h3>
@@ -149,7 +149,7 @@ use App\Enums\Status;
       </table>
 
       </div>
-      <img style="max-width: 20%; transform: scaleX(-1);" class="page-item monty" data-set="1" src="/iit/resources/images/mont1.jpg" alt="pic of my cat">
+      <!-- <img style="max-width: 20%; transform: scaleX(-1);" class="page-item monty" data-set="1" src="/iit/resources/images/mont1.jpg" alt="pic of my cat"> -->
       </div>
     </div>
   </body>
