@@ -21,6 +21,7 @@ use App\Enums\Status;
       echo '<div class="messages">Could not connect to the database. Error: ';
       echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
     } else {
+      echo '<script>console.log("db connected!");</script>';
       $dbOk = true;
     }
     
