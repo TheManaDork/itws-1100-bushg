@@ -62,7 +62,7 @@ use App\Enums\Status;
       $emailInput = trim($_POST["email"]);
       $commentInput = trim($_POST["comment"]);
       // construct auto-generated db vals
-      $timestampInput = date("Y-m-d h:i:sa");
+      $timestampInput = date("Y-m-d h:i:s");
       $statusPending = Status::pending->value;
 
       $insQuery = "insert into comments (`name`,`email`,`comment`, `timestamp`, `status`) values(?,?,?,?,?)";
@@ -112,7 +112,7 @@ use App\Enums\Status;
       for ($i = 0; $i < $numRecords; $i++) {
         $record = $result->fetch_assoc();
         $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
-        $formattedDate = date("F j, Y h:i:s", strtotime($record['timestamp'])); // nice date format
+        $formattedDate = date("F j, Y h:i:sa", strtotime($record['timestamp'])); // nice date format
 
         echo '<div class="comment ' . $rowClass . '">';
         echo '<div class="comment-header">';
