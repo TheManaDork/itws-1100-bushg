@@ -10,10 +10,8 @@ function validate(formObj) {
       if(formObj.elements[e].value == "") {
          alert("Some fields are still blank");
          error = true;
+         return false;
       }
-   }
-   if(error) {
-      return false;
    }
    var formData = "";
    for(var e = 1; e < formObj.elements.length-1; e++) {
