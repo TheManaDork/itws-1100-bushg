@@ -16,7 +16,7 @@ use App\Enums\Status;
     <?php
     // create database connection
     $dbOk = false;
-    @$db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
+    $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
     if ($db->connect_error) {
       echo '<div class="messages">Could not connect to the database. Error: ';
       echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
