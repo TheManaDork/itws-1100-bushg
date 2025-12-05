@@ -20,7 +20,13 @@ use App\Enums\Status;
     // create database connection
       echo '<script>console.log("hi!");</script>';
     $dbOk = false;
-    $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
+    // $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
+    $DB_HOST = $GLOBALS['DB_HOST'];
+    $DB_USERNAME = $GLOBALS['DB_USERNAME'];
+    $DB_PASSWORD = $GLOBALS['DB_PASSWORD'];
+    $DB_NAME = $GLOBALS['DB_NAME'];
+
+    $db = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
     if ($db->connect_error) {
       echo '<div class="messages">Could not connect to the database. Error: ';
       echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
