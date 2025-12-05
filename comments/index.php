@@ -109,7 +109,7 @@ use App\Enums\Status;
       $query = "SELECT * FROM comments ORDER BY 'visitorId' DESC";
       $result = $db->query($query);
       $numRecords = $result->num_rows;
-      for ($i = $numRecords-1; $i >= 1; $i--) {
+      for ($i = 1; $i < $numRecords; $i++) {
         $record = $result->fetch_assoc();
         $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
         $formattedDate = date("F j, Y h:i:sa", strtotime($record['timestamp'])); // nice date format
