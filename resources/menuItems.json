@@ -2,21 +2,21 @@
   "GRAYDON BUSH - HOME": [
     {
       "title": "Labs",
-      "link": "./labs/index.html"
+      "link": "/iit/labs/index.html"
     },
     {
       "title": "Resume",
-      "link": "./labs/lab2/bushg-GraydonBush-resume.html"
+      "link": "/iit/labs/lab2/bushg-GraydonBush-resume.html"
       
     },
     {
       "title": "Contact",
-      "link": "./labs/lab5/index.html"
+      "link": "/iit/labs/lab5/index.html"
       
     },
     {
       "title": "Resources",
-      "link": "./resources/index.html"
+      "link": "/iit/resources/index.html"
       
     }
   ],
