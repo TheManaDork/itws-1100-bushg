@@ -1,0 +1,10 @@
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+
+<Files "update.php">
+	AuthType Basic
+	AuthName "Have at thee!!"
+	Require all granted
+</Files>

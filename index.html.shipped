@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>GRAYDON BUSH - HOME</title>
+    <link rel="stylesheet" href="./resources/nav-pages.css">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./labs/lab8/menuBar.js"></script>
+  </head>
+  <body>
+    <div id="nav-bar">
+      
+      <!-- <a class="button" href="./labs/lab2/bushg-GraydonBush-resume.html">Resume</a>
+      <a class="button" href="./labs/lab5/index.html">Contact</a> -->
+      <h1>  Graydon Bush === Intro to ITWS  </h1>
+     <!--  <a class="button" href="./labs/index.html">Labs</a>
+      <a class="button" href="./resources/index.html">Resources</a> -->
+    </div>
+
+    <div id="page-trifurcation">
+      <div id="seals" class="textbox page-item" style="min-width: 50px;">
+        <div class="img" style="background-image:url('./resources/images/rpisymbol.png');"></div>
+        <div class="img" style="background-image:url('./resources/images/mstsymbol.png');"></div>
+        <div class="img" style="background-image:url('./resources/images/ikesymbol.png');"></div>
+      </div>
+
+      <img style="min-height: 90%;" id="monty" class="page-item" src="./resources/images/mont1.jpg" alt="pic of my cat">
+
+      <div class="textbox page-item" style="min-width: 50px;">
+        <h3 style="margin-bottom: 0;">Hello World!<br>My Name Is</h3>
+        <h1 style="margin: 0px;">Graydon Bush</h2>
+        <h3>You can find me haunting the halls of Rensselaer Polytechnic Institute or at libraries near you!</h3>
+        <h3>If for some reason a person-shaped treasure hunt is not to your tastes or you want a simultaneously slower and faster method of contact then shoot me an email at my school or work emails:</h3>
+        <h3 style="margin: 0 auto;">GTBushWork@gmail.com</h3>
+        <h3 style="margin-top: 8px;">BushG@rpi.edu</h3>
+        <h3>If you want me for any other purpose my many skills include </h3>
+        <h4>Problem Solving</h4>
+        <h4>Algorithmic Programming</h4>
+        <h4>Poetry and Ghostwriting</h4>
+        <h4>Leadership</h4>
+        <h3>For a more detailed list of my abilities and accomplishments please check out my resume and about me on the left side of the nav bar!</h3>
+      </div>
+    </div>
+  </body>
+  </html>
