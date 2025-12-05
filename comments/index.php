@@ -1,6 +1,6 @@
 <?php
-include('/iit/resources/config/config.inc.php');
-include('/iit/resources/config/status.php');
+include(__DIR__ . '/iit/resources/config/config.inc.php');
+include(__DIR__ . '/iit/resources/config/status.php');
 use App\Enums\Status;
 ?>
 
