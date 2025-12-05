@@ -27,7 +27,7 @@
         <div class="img" style="background-image:url('./resources/images/ikesymbol.png');"></div>
       </div>
 
-      <img style="" id="monty" class="page-item" src="./resources/images/mont1.jpg" alt="pic of my cat">
+      <img  id="monty" class="page-item" src="./resources/images/mont1.jpg" alt="pic of my cat">
 
       <div class="textbox page-item" style="min-width: 50px;">
         <h3 style="margin-bottom: 0;">Hello World!<br>My Name Is</h3>
