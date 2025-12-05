@@ -38,10 +38,11 @@ use App\Enums\Status;
       $commentInput = trim($_POST["comment"]);
       // construct auto-generated db vals
       $timestampInput = date("Y-m-d");
+      $statusPending = Status::pending->value;
 
       $insQuery = "insert into comments (`name`,`email`,`comment`, `timestamp`, `status`) values(?,?,?,?,?)";
       $statement = $db->prepare($insQuery);
-      $statement->bind_param("sssss", $nameInput, $emailInput, $commentInput, $timestampInput, Status::pending->value);
+      $statement->bind_param("sssss", $nameInput, $emailInput, $commentInput, $timestampInput, $statusPending);
       $statement->execute();
       echo '<script>console.log("comment added!");</script>';
     }
