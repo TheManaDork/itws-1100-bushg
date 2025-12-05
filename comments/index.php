@@ -83,7 +83,9 @@ use App\Enums\Status;
       $query = 'select * from comments order by timestamp';
       $result = $db->query($query);
       $numRecords = $result->num_rows;
-
+      echo '<script>console.log(`';
+      echo print_r($result);
+      echo '`);</script>';
       // echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
       // for ($i = 0; $i < $numRecords; $i++) {
       //    $record = $result->fetch_assoc();
