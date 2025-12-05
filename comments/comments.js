@@ -2,7 +2,6 @@
    Place variables and functions in this file */
 
 function validate(formObj) {
-   return true;
    // put your validation code here
    // it will be a series of if statements
    var formObj = document.getElementById("addForm");
