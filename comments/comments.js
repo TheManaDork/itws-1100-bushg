@@ -7,7 +7,7 @@ function validate(formObj) {
    var formObj = document.getElementById("addForm");
    var error = false;
    for(var e = 1; e < formObj.elements.length-1; e++) {
-      if(formObj.elements[e].value == "" || formObj.elements[e].value == "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML) {
+      if(formObj.elements[e].value == "") {
          alert("Some fields are still blank");
          error = true;
       }
