@@ -62,6 +62,7 @@ use App\Enums\Status;
       $emailInput = trim($_POST["email"]);
       $commentInput = trim($_POST["comment"]);
 
+      $errors = '';
       $focusId = ''; // trap the first field that needs updating, better would be to save errors in an array
 
       if ($nameInput == '') {
