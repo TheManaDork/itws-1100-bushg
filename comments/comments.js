@@ -17,7 +17,7 @@ function validate(formObj) {
    for(var e = 1; e < formObj.elements.length-1; e++) {
       formData = formData + "<br>" + formObj.elements[e].value;
    }
-   return false;
+   return true;
 }
 
 //I realize that there is a placeholder holder attribute in html that would have done this for me, 

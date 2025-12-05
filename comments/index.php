@@ -60,7 +60,7 @@ use App\Enums\Status;
       <div class="textbox page-item">
       <h3>Welcome to my comments section!</h3>
       <h3>Please politely join the convo!</h3>
-      <form id="addForm" name="addForm" class="" action="#" method="post" onsubmit="return validate(this);">
+      <form id="addForm" name="addForm" class="" action="" method="post" onsubmit="return validate(this);">
         <fieldset>
           <legend><h3 style="margin: 0 0;">Add Your Comment</h3></legend>
           <!-- <div class="formData"> -->
