@@ -45,7 +45,7 @@ use App\Enums\Status;
   </head>
   <body>
     <?php
-    // create database connection
+    // create dataxbase connection
     $dbOk = false;
     $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
     if ($db->connect_error) {
@@ -58,23 +58,23 @@ use App\Enums\Status;
     $havePost = isset($_POST["save"]);
     //validation has already been done via comments.js
     if($dbOk && $havePost) {
+      $nameInput = trim($_POST["name"]);
+      $emailInput = trim($_POST["email"]);
+      $commentInput = trim($_POST["comment"]);
+
       $focusId = ''; // trap the first field that needs updating, better would be to save errors in an array
 
-      if ($firstNames == '') {
-        $errors .= '<li>First name may not be blank</li>';
-        if ($focusId == '') $focusId = '#firstNames';
+      if ($nameInput == '') {
+        $errors .= '<li>Name may not be blank</li>';
+        if ($focusId == '') $focusId = '#name';
       }
-      if ($lastName == '') {
-        $errors .= '<li>Last name may not be blank</li>';
-        if ($focusId == '') $focusId = '#lastName';
+      if ($emailInput == '') {
+        $errors .= '<li>Email may not be blank</li>';
+        if ($focusId == '') $focusId = '#email';
       }
-      if ($dob == '') {
-        $errors .= '<li>Date of birth may not be blank</li>';
-        if ($focusId == '') $focusId = '#dob';
-      }
-      if (!$dobOk) {
-        $errors .= '<li>Enter a valid date in yyyy-mm-dd format</li>';
-        if ($focusId == '') $focusId = '#dob';
+      if ($commentInput == '') {
+        $errors .= '<li>You did not provide a comment!</li>';
+        if ($focusId == '') $focusId = '#comment';
       }
 
       if ($errors != '') {
@@ -87,9 +87,7 @@ use App\Enums\Status;
         echo '  });';
         echo '</script>';
       } else {
-        $nameInput = trim($_POST["name"]);
-        $emailInput = trim($_POST["email"]);
-        $commentInput = trim($_POST["comment"]);
+        
         // construct auto-generated db vals
         $timestampInput = date("Y-m-d h:i:s");
         $statusPending = Status::pending->value;
