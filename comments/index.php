@@ -45,6 +45,8 @@ use App\Enums\Status;
       $statement->bind_param("sssss", $nameInput, $emailInput, $commentInput, $timestampInput, $statusPending);
       $statement->execute();
       echo '<script>console.log("comment added!");</script>';
+      header("Location: " . $_SERVER['PHP_SELF']);
+      exit();
     }
 
     ?>
