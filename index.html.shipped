@@ -27,7 +27,7 @@
         <div class="img" style="background-image:url('./resources/images/ikesymbol.png');"></div>
       </div>
 
-      <img  id="monty" class="page-item" src="./resources/images/mont1.jpg" alt="pic of my cat">
+      <img script="" id="monty" class="page-item" src="./resources/images/mont1.jpg" alt="pic of my cat">
 
       <div class="textbox page-item" style="min-width: 50px;">
         <h3 style="margin-bottom: 0;">Hello World!<br>My Name Is</h3>
@@ -41,7 +41,7 @@
         <h4>Algorithmic Programming</h4>
         <h4>Poetry and Ghostwriting</h4>
         <h4>Leadership</h4>
-        <h3>For a more detailed list of my abilities and accomplishments please check out my resume and about me on the left side of the nav bar!</h3>
+        <h3>For a more detailed list of my abilities and accomplishments please check out my Resume and About Me on the left side of the nav bar!</h3>
       </div>
     </div>
   </body>
