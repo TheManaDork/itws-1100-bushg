@@ -84,7 +84,7 @@ use App\Enums\Status;
     </div>
     <div id="page-trifurcation">
       <!-- <img  style="max-width: 20%;" class="page-item monty" data-set="1" src="/iit/resources/images/mont1.jpg" alt="pic of my cat"> -->
-      <div class="textbox page-item">
+      <div style="max-width: 80%" class="textbox page-item">
       <h3>Welcome to my comments section!</h3>
       <h3>Please politely join the convo!</h3>
       <form id="addForm" name="addForm" class="" action="" method="post" onsubmit="return validate(this);">
