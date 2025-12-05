@@ -3,7 +3,7 @@
 $(document).ready(function() {
   $.ajax({
   	type: "GET",
-  	url: "http://bushgrpi.eastus.cloudapp.azure.com/iit/resources/menuItems.json",
+  	url: "/iit/resources/menuItems.json",
   	dataType: "json",
   	success: function(responseData, status) {
   	  var output = "";
