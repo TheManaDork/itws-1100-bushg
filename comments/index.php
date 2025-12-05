@@ -1,6 +1,6 @@
 <?php
-include(__DIR__ . '/iit/resources/config/config.inc.php');
-include(__DIR__ . '/iit/resources/config/status.php');
+include('\iit\resources\config\config.inc.php');
+include('\iit\resources\config\status.php');
 use App\Enums\Status;
 ?>
 
@@ -14,19 +14,10 @@ use App\Enums\Status;
   </head>
   <body>
     <?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
     // create database connection
       echo '<script>console.log("hi!");</script>';
     $dbOk = false;
-    // $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
-    $DB_HOST = $GLOBALS['DB_HOST'];
-    $DB_USERNAME = $GLOBALS['DB_USERNAME'];
-    $DB_PASSWORD = $GLOBALS['DB_PASSWORD'];
-    $DB_NAME = $GLOBALS['DB_NAME'];
-
-    $db = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
+    $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
     if ($db->connect_error) {
       echo '<div class="messages">Could not connect to the database. Error: ';
       echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
