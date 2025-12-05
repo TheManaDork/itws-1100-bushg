@@ -58,20 +58,50 @@ use App\Enums\Status;
     $havePost = isset($_POST["save"]);
     //validation has already been done via comments.js
     if($dbOk && $havePost) {
-      $nameInput = trim($_POST["name"]);
-      $emailInput = trim($_POST["email"]);
-      $commentInput = trim($_POST["comment"]);
-      // construct auto-generated db vals
-      $timestampInput = date("Y-m-d h:i:s");
-      $statusPending = Status::pending->value;
+      $focusId = ''; // trap the first field that needs updating, better would be to save errors in an array
 
-      $insQuery = "insert into comments (`name`,`email`,`comment`, `timestamp`, `status`) values(?,?,?,?,?)";
-      $statement = $db->prepare($insQuery);
-      $statement->bind_param("sssss", $nameInput, $emailInput, $commentInput, $timestampInput, $statusPending);
-      $statement->execute();
-      echo '<script>console.log("comment added!");</script>';
-      header("Location: " . $_SERVER['PHP_SELF']);
-      exit();
+      if ($firstNames == '') {
+        $errors .= '<li>First name may not be blank</li>';
+        if ($focusId == '') $focusId = '#firstNames';
+      }
+      if ($lastName == '') {
+        $errors .= '<li>Last name may not be blank</li>';
+        if ($focusId == '') $focusId = '#lastName';
+      }
+      if ($dob == '') {
+        $errors .= '<li>Date of birth may not be blank</li>';
+        if ($focusId == '') $focusId = '#dob';
+      }
+      if (!$dobOk) {
+        $errors .= '<li>Enter a valid date in yyyy-mm-dd format</li>';
+        if ($focusId == '') $focusId = '#dob';
+      }
+
+      if ($errors != '') {
+        echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+        echo $errors;
+        echo '</ul></div>';
+        echo '<script type="text/javascript">';
+        echo '  $(document).ready(function() {';
+        echo '    $("' . $focusId . '").focus();';
+        echo '  });';
+        echo '</script>';
+      } else {
+        $nameInput = trim($_POST["name"]);
+        $emailInput = trim($_POST["email"]);
+        $commentInput = trim($_POST["comment"]);
+        // construct auto-generated db vals
+        $timestampInput = date("Y-m-d h:i:s");
+        $statusPending = Status::pending->value;
+
+        $insQuery = "insert into comments (`name`,`email`,`comment`, `timestamp`, `status`) values(?,?,?,?,?)";
+        $statement = $db->prepare($insQuery);
+        $statement->bind_param("sssss", $nameInput, $emailInput, $commentInput, $timestampInput, $statusPending);
+        $statement->execute();
+        echo '<script>console.log("comment added!");</script>';
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
+      }
     }
 
     ?>
