@@ -12,6 +12,7 @@ $(document).ready(function() {
       if(!menuItem) {
         alert("error: menuItem array emptry");
       }
+      console.log("LAB9 Item?: " + menuItem.find(item => item.title == "LAB9" ));
   	  $.each(menuItem, function(i, item) {
   	    output+= '<a class="button" href="' + item.link + '">' + item.title + '</a>';
   	  });
