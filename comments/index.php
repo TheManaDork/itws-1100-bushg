@@ -78,32 +78,32 @@ use App\Enums\Status;
       $result = $db->query($query);
       $numRecords = $result->num_rows;
 
-      echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
-      for ($i = 0; $i < $numRecords; $i++) {
-         $record = $result->fetch_assoc();
-         if ($i % 2 == 0) {
-            echo "\n" . '<tr id="actor-' . $record['actorid'] . '"><td>';
-         } else {
-            echo "\n" . '<tr class="odd" id="actor-' . $record['actorid'] . '"><td>';
-         }
-         echo htmlspecialchars($record['last_name']) . ', ';
-         echo htmlspecialchars($record['first_names']);
-         echo '</td><td>';
-         echo htmlspecialchars($record['dob']);
-         echo '</td><td>';
-         echo '<img src="resources/delete.png" class="deleteActor" width="16" height="16" alt="delete actor"/>';
-         echo '</td></tr>';
-         // Uncomment the following three lines to see the underlying
-         // associative array for each record.
-         // echo '<tr><td colspan="3" style="white-space: pre;">';
-         // print_r($record);
-         // echo '</td></tr>';
-      }
+      // echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
+      // for ($i = 0; $i < $numRecords; $i++) {
+      //    $record = $result->fetch_assoc();
+      //    if ($i % 2 == 0) {
+      //       echo "\n" . '<tr id="actor-' . $record['actorid'] . '"><td>';
+      //    } else {
+      //       echo "\n" . '<tr class="odd" id="actor-' . $record['actorid'] . '"><td>';
+      //    }
+      //    echo htmlspecialchars($record['last_name']) . ', ';
+      //    echo htmlspecialchars($record['first_names']);
+      //    echo '</td><td>';
+      //    echo htmlspecialchars($record['dob']);
+      //    echo '</td><td>';
+      //    echo '<img src="resources/delete.png" class="deleteActor" width="16" height="16" alt="delete actor"/>';
+      //    echo '</td></tr>';
+      //    // Uncomment the following three lines to see the underlying
+      //    // associative array for each record.
+      //    // echo '<tr><td colspan="3" style="white-space: pre;">';
+      //    // print_r($record);
+      //    // echo '</td></tr>';
+      // }
 
-      $result->free();
+      // $result->free();
 
-      // Finally, let's close the database
-      $db->close();
+      // // Finally, let's close the database
+      // $db->close();
    }
 
    ?>
