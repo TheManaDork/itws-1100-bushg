@@ -106,7 +106,7 @@ use App\Enums\Status;
         <?php
    if ($dbOk) {
 
-      $query = "SELECT * FROM comments /*WHERE status = 'approved'*/ ORDER BY timestamp ASC";
+      $query = "SELECT * FROM comments ORDER BY email ASC";
       $result = $db->query($query);
       $numRecords = $result->num_rows;
       for ($i = 0; $i < $numRecords; $i++) {
