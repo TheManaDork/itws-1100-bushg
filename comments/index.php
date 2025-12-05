@@ -62,7 +62,7 @@ use App\Enums\Status;
       $emailInput = trim($_POST["email"]);
       $commentInput = trim($_POST["comment"]);
       // construct auto-generated db vals
-      $timestampInput = date("Y-m-d");
+      $timestampInput = date("Y-m-d h:i:sa");
       $statusPending = Status::pending->value;
 
       $insQuery = "insert into comments (`name`,`email`,`comment`, `timestamp`, `status`) values(?,?,?,?,?)";
