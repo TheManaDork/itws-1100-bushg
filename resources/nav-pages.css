@@ -39,11 +39,11 @@ body {
 }
 .page-item {
   flex: 1;
-  max-width: 36%;
+  max-width: 32%;
 }
 
 .monty {
-  max-width: 32%;
+  max-width: 34%;
 }
 
 #seals {
