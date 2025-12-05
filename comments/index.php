@@ -116,7 +116,7 @@ use App\Enums\Status;
       echo '<script>console.log(`';
       echo print_r($result);
       echo '`);</script>';
-      echo '<tr><th>Name:</th><th>Email:</th><th></th></tr>';
+      // echo '<tr><th>Name:</th><th>Email:</th><th></th></tr>';
       for ($i = 0; $i < $numRecords; $i++) {
          $record = $result->fetch_assoc();
     $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
