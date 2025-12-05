@@ -21,13 +21,13 @@
           <!-- <div class="formData"> -->
 
           <label for="name" class="field"><h3>Name</h3></label>
-          <div class="value"><input type="text" size="60" value="Please enter your name" name="name" id="name" /></div>
+          <div class="value"><input type="text" size="60" placeholder="Please enter your name" name="name" id="name" /></div>
 
           <label for="email" class="field"><h3>Email</h3></label>
-          <div class="value"><input type="text" size="60" value="Please enter your email" name="email" id="email" /></div>
+          <div class="value"><input type="text" size="60" placeholder="Please enter your email" name="email" id="email" /></div>
 
           <label for="comments" class="field"><h3>Comment</h3></label>
-          <div class="value"><textarea rows="4" cols="40" name="comment" id="comment">Please enter your Comments</textarea></div>
+          <div class="value"><textarea rows="4" cols="40" name="comment" id="comment" placeholder="Please enter your Comments"></textarea></div>
 
           <input type="submit" value="save" id="save" name="save" />
        </fieldset>

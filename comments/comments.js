@@ -24,21 +24,21 @@ function validate(formObj) {
 
 //I realize that there is a placeholder holder attribute in html that would have done this for me, 
 //I did this for the sake of getting more practice with JavaScript.
-document.addEventListener("click", function() {
-   var formObj = document.getElementById("addForm");
-   var labels = document.getElementsByTagName("label");
-   for(var e = 1; e < formObj.elements.length-1; e++) {
-      if(formObj.elements[e].value == "" && document.activeElement.id != formObj.elements[e].id) {
-         formObj.elements[e].value = "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML;
-      } else if(formObj.elements[e].value == "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML && document.activeElement.id == formObj.elements[e].id) {
-         formObj.elements[e].value = "";
-      }
+// document.addEventListener("click", function() {
+//    var formObj = document.getElementById("addForm");
+//    var labels = document.getElementsByTagName("label");
+//    for(var e = 1; e < formObj.elements.length-1; e++) {
+//       if(formObj.elements[e].value == "" && document.activeElement.id != formObj.elements[e].id) {
+//          formObj.elements[e].value = "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML;
+//       } else if(formObj.elements[e].value == "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML && document.activeElement.id == formObj.elements[e].id) {
+//          formObj.elements[e].value = "";
+//       }
 
-      if(formObj.elements[e].id == document.activeElement.id) {
-         console.log(formObj.elements[e].value == "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML);
-      }
-   }
-});
+//       if(formObj.elements[e].id == document.activeElement.id) {
+//          console.log(formObj.elements[e].value == "Please enter your " + document.querySelector('label[for='+formObj.elements[e].id+']').innerHTML);
+//       }
+//    }
+// });
 
 function displayResults(button) {
    var formObj = document.getElementById("addForm");
