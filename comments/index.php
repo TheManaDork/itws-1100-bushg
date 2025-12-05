@@ -46,14 +46,12 @@ use App\Enums\Status;
   <body>
     <?php
     // create database connection
-      echo '<script>console.log("hi!");</script>';
     $dbOk = false;
     $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
     if ($db->connect_error) {
       echo '<div class="messages">Could not connect to the database. Error: ';
       echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
     } else {
-      echo '<script>console.log("db connected!");</script>';
       $dbOk = true;
     }
     
@@ -108,13 +106,9 @@ use App\Enums\Status;
         <?php
    if ($dbOk) {
 
-      $query = 'select * from comments order by timestamp';
+      $query = "SELECT * FROM comments /*WHERE status = 'approved'*/ ORDER BY timestamp DESC";
       $result = $db->query($query);
       $numRecords = $result->num_rows;
-      echo '<script>console.log(`';
-      echo print_r($result);
-      echo '`);</script>';
-      // echo '<tr><th>Name:</th><th>Email:</th><th></th></tr>';
       for ($i = 0; $i < $numRecords; $i++) {
         $record = $result->fetch_assoc();
         $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
