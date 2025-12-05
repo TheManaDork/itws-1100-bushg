@@ -106,7 +106,7 @@ use App\Enums\Status;
         <?php
    if ($dbOk) {
 
-      $query = "SELECT * FROM comments ORDER BY 'timestamp' DESC";
+      $query = "SELECT * FROM comments ORDER BY 'timestamp' ASC";
       $result = $db->query($query);
       $numRecords = $result->num_rows;
       for ($i = $numRecords-1; $i >= 1; $i--) {
