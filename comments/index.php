@@ -15,6 +15,7 @@ use App\Enums\Status;
   <body>
     <?php
     // create database connection
+      echo '<script>console.log("hi!");</script>';
     $dbOk = false;
     $db = new mysqli($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD'], $GLOBALS['DB_NAME']);
     if ($db->connect_error) {
