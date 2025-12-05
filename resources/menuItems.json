@@ -23,31 +23,31 @@
   "GRAYDON BUSH - LABS": [
     {
       "title": "LAB1",
-      "link": "/labs/lab1/index.html"
+      "link": "/iit/labs/lab1/index.html"
     },
     {
       "title": "LAB2",
-      "link": "/labs/lab2/index.html"
+      "link": "/iit/labs/lab2/index.html"
     },
     {
       "title": "LAB3",
-      "link": "/labs/lab3/index.html"
+      "link": "/iit/labs/lab3/index.html"
     },
     {
       "title": "LAB4",
-      "link": "/labs/lab4/index.html"
+      "link": "/iit/labs/lab4/index.html"
     },
     {
       "title": "LAB5",
-      "link": "/labs/lab5/index.html"
+      "link": "/iit/labs/lab5/index.html"
     },
     {
       "title": "LAB9",
-      "link": "/labs/lab9/index.html"
+      "link": "/iit/labs/lab9/index.html"
     },
     {
       "title": "LAB10",
-      "link": "/labs/lab10/index.html"
+      "link": "/iit/labs/lab10/index.html"
     }
   ]
 }
