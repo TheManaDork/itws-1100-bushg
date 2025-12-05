@@ -92,17 +92,19 @@ use App\Enums\Status;
       echo '<tr><th>Name:</th><th>Email:</th><th></th></tr>';
       for ($i = 0; $i < $numRecords; $i++) {
          $record = $result->fetch_assoc();
-         if ($i % 2 == 0) {
-            echo "\n" . '<tr id=""><td>';
-         } else {
-            echo "\n" . '<tr class="odd" id=""><td>';
-         }
-         echo htmlspecialchars($record['name']) . ', ';
-         echo htmlspecialchars($record['email']);
-         echo '</td><td>';
-         echo htmlspecialchars($record['timestamp']);
-         echo '</td><td>';
-         echo '</td></tr>';
+    $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
+    $formattedDate = date("F j, Y", strtotime($record['timestamp'])); // nice date format
+
+    echo '<div class="comment ' . $rowClass . '">';
+    echo '<div class="comment-header">';
+    echo '<strong>' . htmlspecialchars($record['name']) . '</strong>';
+    echo ' (<a href="mailto:' . htmlspecialchars($record['email']) . '">' . htmlspecialchars($record['email']) . '</a>)';
+    echo ' <span class="comment-date">' . $formattedDate . '</span>';
+    echo '</div>'; // comment-header
+    echo '<div class="comment-body">';
+    echo nl2br(htmlspecialchars($record['comment'])); // preserve line breaks
+    echo '</div>'; // comment-body
+    echo '</div>'; // comment
          // Uncomment the following three lines to see the underlying
          // associative array for each record.
          // echo '<tr><td colspan="3" style="white-space: pre;">';
