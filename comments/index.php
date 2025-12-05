@@ -15,30 +15,29 @@ use App\Enums\Status;
     <title>GRAYDON BUSH - COMMENTS</title>
     <link rel="stylesheet" href="/iit/resources/nav-pages.css">
     <script type="text/javascript" src="comments.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
       .comment {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+      }
 
-.comment-odd {
-    background-color: #f9f9f9;
-}
+      .comment-odd {
+        background-color: #f9f9f9;
+      }
 
-.comment-header {
-    font-size: 0.9em;
-    /*color: #555;*/
-}
+      .comment-header {
+        font-size: 0.9em;
+      }
 
-.comment-date {
-    font-size: 0.8em;
-    /*color: #999;*/
-}
+      .comment-date {
+        font-size: 0.8em;
+      }
 
-.comment-body {
-    margin-top: 5px;
-    font-size: 1em;
-}
+      .comment-body {
+        margin-top: 5px;
+        font-size: 1em;
+      }
 
     </style>
 
