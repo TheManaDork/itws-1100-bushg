@@ -27,12 +27,12 @@ use App\Enums\Status;
 
 .comment-header {
     font-size: 0.9em;
-    color: #555;
+    /*color: #555;*/
 }
 
 .comment-date {
     font-size: 0.8em;
-    color: #999;
+    /*color: #999;*/
 }
 
 .comment-body {
