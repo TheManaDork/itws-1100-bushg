@@ -104,8 +104,6 @@ use App\Enums\Status;
           <input type="submit" value="save" id="save" name="save" />
        </fieldset>
       </form>
-      <button id="results" onclick="displayResults(this)">Results</button>
-        <!-- </div> -->
       <table id="actorTable">
         <?php
    if ($dbOk) {
@@ -118,30 +116,29 @@ use App\Enums\Status;
       echo '`);</script>';
       // echo '<tr><th>Name:</th><th>Email:</th><th></th></tr>';
       for ($i = 0; $i < $numRecords; $i++) {
-         $record = $result->fetch_assoc();
-    $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
-    $formattedDate = date("F j, Y", strtotime($record['timestamp'])); // nice date format
+        $record = $result->fetch_assoc();
+        $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
+        $formattedDate = date("F j, Y", strtotime($record['timestamp'])); // nice date format
 
-    echo '<div class="comment ' . $rowClass . '">';
-    echo '<div class="comment-header">';
-    echo '<strong>' . htmlspecialchars($record['name']) . '</strong>';
-    echo ' (<a href="mailto:' . htmlspecialchars($record['email']) . '">' . htmlspecialchars($record['email']) . '</a>)';
-    echo ' <span class="comment-date">' . $formattedDate . '</span>';
-    echo '</div>'; // comment-header
-    echo '<div class="comment-body">';
-    echo nl2br(htmlspecialchars($record['comment'])); // preserve line breaks
-    echo '</div>'; // comment-body
-    echo '</div>'; // comment
-         // Uncomment the following three lines to see the underlying
-         // associative array for each record.
-         // echo '<tr><td colspan="3" style="white-space: pre;">';
-         // print_r($record);
-         // echo '</td></tr>';
+        echo '<div class="comment ' . $rowClass . '">';
+        echo '<div class="comment-header">';
+        echo '<strong>' . htmlspecialchars($record['name']) . '</strong>';
+        echo ' (<a href="mailto:' . htmlspecialchars($record['email']) . '">' . htmlspecialchars($record['email']) . '</a>)';
+        echo ' <span class="comment-date">' . $formattedDate . '</span>';
+        echo '</div>'; // comment-header
+        echo '<div class="comment-body">';
+        echo nl2br(htmlspecialchars($record['comment'])); // preserve line  breaks
+        echo '</div>'; // comment-body
+        echo '</div>'; // comment
+        // Uncomment the following three lines to see the underlying
+        // associative array for each record.
+        // echo '<tr><td colspan="3" style="white-space: pre;">';
+        // print_r($record);
+        // echo '</td></tr>';
       }
 
       $result->free();
 
-      // Finally, let's close the database
       $db->close();
    }
 
