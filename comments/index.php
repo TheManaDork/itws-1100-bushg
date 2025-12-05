@@ -2,7 +2,7 @@
 
 <html>
   <head>
-      <title>GRAYDON BUSH - LAB 5</title>
+      <title>GRAYDON BUSH - COMMENTS</title>
       <link rel="stylesheet" href="/iit/resources/nav-pages.css">
       <script type="text/javascript" src="comments.js"></script>
   </head>
