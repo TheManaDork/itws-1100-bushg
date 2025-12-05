@@ -26,7 +26,7 @@ use App\Enums\Status;
     
     $havePost = isset($_POST["save"]);
     //validation has already been done via comments.js
-    if($dbOk) {
+    if($dbOk && $havePost) {
       $nameInput = trim($_POST["name"]);
       $emailInput = trim($_POST["email"]);
       $commentInput = trim($_POST["comment"]);
