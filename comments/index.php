@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 include('/iit/resources/config/config.inc.php');
 include('/iit/resources/config/status.php');
 use App\Enums\Status;
@@ -14,9 +17,6 @@ use App\Enums\Status;
   </head>
   <body>
     <?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
     // create database connection
       echo '<script>console.log("hi!");</script>';
     $dbOk = false;
