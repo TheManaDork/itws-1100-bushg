@@ -112,7 +112,7 @@ use App\Enums\Status;
       for ($i = 0; $i < $numRecords; $i++) {
         $record = $result->fetch_assoc();
         $rowClass = ($i % 2 == 0) ? 'comment-even' : 'comment-odd';
-        $formattedDate = date("F j, Y", strtotime($record['timestamp'])); // nice date format
+        $formattedDate = date("F j, Y h:i:sa", strtotime($record['timestamp'])); // nice date format
 
         echo '<div class="comment ' . $rowClass . '">';
         echo '<div class="comment-header">';
