@@ -72,6 +72,10 @@ use App\Enums\Status;
         $errors .= '<li>Email may not be blank</li>';
         if ($focusId == '') $focusId = '#email';
       }
+      if((strpos($emailInput, "@") - strpos($emailInput, ".")) < 1) {
+        $errors.= '<li>Email is invalid</li>'
+        if($focusId == '') $focusId = '#email';
+      }
       if ($commentInput == '') {
         $errors .= '<li>You did not provide a comment!</li>';
         if ($focusId == '') $focusId = '#comment';
