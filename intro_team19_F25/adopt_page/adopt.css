@@ -1,0 +1,95 @@
+/* These styles ONLY apply to adopt_page/index.html */
+
+:root {
+    --adopt-hero-bg: #fdf5ff;
+    --adopt-hero-border: #f7e1ff;
+    --adopt-border: #e0e0e0;
+    --adopt-step-bg: #fdf5ff;
+    --adopt-step-border: #f7e1ff;
+    --adopt-text: #333;
+}
+
+body.dark-mode {
+    --adopt-hero-bg: #2d1f2d;
+    --adopt-hero-border: #4a2d4a;
+    --adopt-border: #444;
+    --adopt-step-bg: #3a2d3a;
+    --adopt-step-border: #5a3a5a;
+    --adopt-text: #e0e0e0;
+}
+
+.adopt-content .hero {
+    background-color: var(--adopt-hero-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--adopt-hero-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.adoption-steps {
+    padding: 20px 0;
+    border-top: 1px solid var(--adopt-border);
+    transition: border-color 0.3s ease;
+}
+
+.adoption-steps h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.steps-list {
+    list-style: none; /* Remove default numbers */
+    counter-reset: steps-counter; /* Start a new counter */
+    padding-left: 0;
+}
+
+.steps-list li {
+    counter-increment: steps-counter; /* Increment the counter */
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 50px; /* Make space for the number */
+    line-height: 1.7;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.steps-list li::before {
+    content: counter(steps-counter); /* Display the counter number */
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8a2be2; /* A purple color */
+    background-color: var(--adopt-step-bg);
+    border: 1px solid var(--adopt-step-border);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.steps-list li strong {
+    display: block;
+    font-weight: 600;
+    color: var(--adopt-text);
+    transition: color 0.3s ease;
+}
+
+.steps-list li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.steps-list li a:hover {
+    text-decoration: underline;
+}

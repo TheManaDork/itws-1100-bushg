@@ -1,0 +1,422 @@
+/* Admin Page Styles - Dark Mode Support */
+
+:root {
+    --admin-bg: #f9f9f9;
+    --admin-card-bg: #ffffff;
+    --admin-text: #333;
+    --admin-text-secondary: #666;
+    --admin-border: #e0e0e0;
+}
+
+body.dark-mode {
+    --admin-bg: #2d2d2d;
+    --admin-card-bg: #1e1e1e;
+    --admin-text: #e0e0e0;
+    --admin-text-secondary: #b0b0b0;
+    --admin-border: #444;
+}
+
+/* Admin Header */
+.admin-header {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.admin-header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Admin Tabs */
+.admin-tabs-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid var(--admin-border);
+    margin-bottom: 0;
+    transition: border-color 0.3s ease;
+}
+
+.admin-tab-btn {
+    padding: 12px 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--admin-text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-tab-btn:hover {
+    color: #007bff;
+}
+
+.admin-tab-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+/* Admin Container */
+.admin-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tab Content */
+.admin-tab-content {
+    display: none;
+    background-color: var(--admin-bg);
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--admin-border);
+    border-top: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.admin-tab-content.active {
+    display: block;
+}
+
+.admin-tab-content h3 {
+    margin-top: 0;
+    color: var(--admin-text);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.section-description {
+    color: var(--admin-text-secondary);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Accounts List */
+.accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.account-card {
+    background-color: var(--admin-card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.account-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-info {
+    flex: 1;
+}
+
+.account-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+}
+
+.account-email {
+    color: var(--admin-text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+}
+
+.account-type {
+    display: inline-block;
+    background-color: #e7f3ff;
+    color: #007bff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.account-date {
+    color: var(--admin-text-secondary);
+    font-size: 0.85rem;
+    margin: 5px 0 0 0;
+    transition: color 0.3s ease;
+}
+
+.account-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-view {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-view:hover {
+    background-color: #0056b3;
+}
+
+.btn-approve {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--admin-card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: var(--admin-text);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#account-detail-container {
+    margin-bottom: 25px;
+}
+
+.detail-row {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--admin-border);
+    transition: border-color 0.3s ease;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--admin-text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.detail-value {
+    color: var(--admin-text);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--admin-border);
+    transition: border-color 0.3s ease;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .admin-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .admin-info {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .account-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .account-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .btn-small {
+        flex: 1;
+    }
+
+    .admin-tabs {
+        flex-wrap: wrap;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Resources/jquery-3.6.1.min.js"></script>
+    <title>Pet Net - Admin Panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <script src="../settings.js" defer></script>
+    <script src="admin.js" defer></script>
+</head>
+
+<body>
+    <div class="site-container">
+        <header class="site-header">
+            <div class="logo-container">
+                <h1 class="logo-text">Pet Net</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search_page/index.html">Search</a></li>
+                    <li><a href="../about_page/index.html">About</a></li>
+                    <li><a href="../contact_page/index.html">Contact</a></li>
+                    <li><a href="../verify_page/index.html">Verify</a></li>
+                    <li><a href="../adopt_page/index.html" class="nav-button">Adopt Now</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <!-- Admin Header -->
+            <section class="admin-header">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-info">
+                    <p id="admin-email"></p>
+                    <button id="logout-btn" class="btn btn-danger">Logout</button>
+                </div>
+            </section>
+
+            <!-- Admin Navigation Tabs -->
+            <div class="admin-tabs-container">
+                <div class="admin-tabs">
+                    <button class="admin-tab-btn active" data-tab="pending-tab">Pending Verifications</button>
+                    <button class="admin-tab-btn" data-tab="verified-tab">Verified Accounts</button>
+                    <button class="admin-tab-btn" data-tab="rejected-tab">Rejected Accounts</button>
+                </div>
+            </div>
+
+            <!-- Admin Content -->
+            <div class="admin-container">
+                <!-- Pending Verifications Section -->
+                <section id="pending-tab" class="admin-tab-content active">
+                    <h3>Pending Verifications</h3>
+                    <p class="section-description">Review and verify pending account submissions</p>
+                    
+                    <div id="pending-list" class="accounts-list">
+                        <!-- Pending accounts will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Verified Accounts Section -->
+                <section id="verified-tab" class="admin-tab-content">
+                    <h3>Verified Accounts</h3>
+                    <p class="section-description">All verified accounts</p>
+                    
+                    <div id="verified-list" class="accounts-list">
+                        <!-- Verified accounts will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Rejected Accounts Section -->
+                <section id="rejected-tab" class="admin-tab-content">
+                    <h3>Rejected Accounts</h3>
+                    <p class="section-description">All rejected accounts</p>
+                    
+                    <div id="rejected-list" class="accounts-list">
+                        <!-- Rejected accounts will be loaded here -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Account Detail Modal -->
+            <div id="detail-modal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    
+                    <h3>Account Details</h3>
+                    
+                    <div id="account-detail-container"></div>
+                    
+                    <div id="action-buttons" class="modal-actions">
+                        <!-- Action buttons will be populated based on account status -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Pet Net</p>
+        </footer>
+    </div>
+</body>
+</html>

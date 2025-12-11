@@ -1,0 +1,358 @@
+/* Verify Page Styles - Dark Mode Support */
+
+:root {
+    --verify-bg: #f9f9f9;
+    --verify-container-bg: white;
+    --verify-text: #333;
+    --verify-text-secondary: #666;
+    --verify-border: #e0e0e0;
+}
+
+body.dark-mode {
+    --verify-bg: #2d2d2d;
+    --verify-container-bg: #1e1e1e;
+    --verify-text: #e0e0e0;
+    --verify-text-secondary: #b0b0b0;
+    --verify-border: #444;
+}
+
+/* Tabs */
+.tabs-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--verify-container-bg);
+    transition: background-color 0.3s ease;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid var(--verify-border);
+    margin-bottom: 0;
+    transition: border-color 0.3s ease;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--verify-text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #007bff;
+}
+
+.tab-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.verification-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    background-color: var(--verify-bg);
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--verify-border);
+    border-top: none;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Sections */
+.login-section,
+.admin-login-section,
+.verification-section,
+.upload-section,
+.status-section {
+    background-color: var(--verify-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--verify-border);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.login-section h3,
+.admin-login-section h3,
+.verification-section h3,
+.upload-section h3,
+.status-section h3 {
+    margin-top: 0;
+    color: var(--verify-text);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.section-description {
+    color: var(--verify-text-secondary);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Forms */
+.login-form,
+.admin-login-form,
+.verification-form,
+.pet-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--verify-text);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--verify-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--verify-container-bg);
+    color: var(--verify-text);
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="file"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.file-help {
+    font-size: 0.85rem;
+    color: var(--verify-text-secondary);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    align-self: flex-start;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Status Card */
+.status-card {
+    background-color: var(--verify-container-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #d0e7ff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.status-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.status-card p {
+    font-size: 1.1rem;
+    color: var(--verify-text);
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .verification-container {
+        padding: 15px;
+    }
+
+    .verification-section,
+    .upload-section,
+    .status-section {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .verification-section h3,
+    .upload-section h3,
+    .status-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+/* Override header styles for proper spacing */
+.site-header {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.main-nav {
+    flex: 1;
+    min-width: 400px;
+}
+
+.main-nav ul {
+    width: auto !important;
+    justify-content: flex-end !important;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .site-header {
+        gap: 15px !important;
+    }
+
+    .main-nav {
+        min-width: 300px;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        gap: 10px !important;
+    }
+
+    .main-nav {
+        min-width: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: row !important;
+        gap: 8px !important;
+    }
+
+    .main-nav a {
+        padding: 4px;
+        font-size: 0.85rem;
+    }
+}

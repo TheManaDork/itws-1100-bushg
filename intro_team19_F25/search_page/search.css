@@ -1,0 +1,130 @@
+/* These styles ONLY apply to search/index.html */
+
+:root {
+    --search-hero-bg: #eef7ff;
+    --search-hero-border: #d0e7ff;
+    --search-border: #e0e0e0;
+    --search-text: #333;
+}
+
+body.dark-mode {
+    --search-hero-bg: #1f2d3a;
+    --search-hero-border: #2d4a5a;
+    --search-border: #444;
+    --search-text: #e0e0e0;
+}
+
+.search-content .hero {
+    background-color: var(--search-hero-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--search-hero-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-form-container {
+    padding: 20px 0;
+    border-top: 1px solid var(--search-border);
+    display: flex;
+    transition: border-color 0.3s ease;
+    flex-flow: row nowrap;
+}
+
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.form-group select {
+    padding: 8px 12px;
+    border: 1px solid var(--search-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: justify;
+    background-color: var(--secondary-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+    appearance: none; 
+}
+
+.form-group select:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+    outline: none;
+}
+
+.form-group select option {
+    background-color: var(--secondary-bg);
+    color: var(--text-primary);
+}
+
+.form-group .btn {
+    padding: 9px 20px;
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    font-weight: 500;
+}
+
+.form-group .btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+
+
+
+.inline-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px; /* space between label and checkbox */
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--primary-bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inline-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.inline-checkbox label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--nav-link-color);
+    cursor: pointer;
+}
+
+/* Optional: hover/focus effect like select boxes */
+.inline-checkbox:hover,
+.inline-checkbox input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+}
