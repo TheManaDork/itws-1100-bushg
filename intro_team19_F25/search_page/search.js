@@ -206,7 +206,7 @@ function generateImage(pet) {
 	} else {
 		return pet.image;
 	}
-	let string = "/intro_team19_F25/pet_data/Generic_"+pet.type+"_Photos/"+type+"Pics"+ num + ".jpg";
+	let string = "../pet_data/Generic_"+pet.type+"_Photos/"+type+"Pics"+ num + ".jpg";
 	return string;
 }
 
