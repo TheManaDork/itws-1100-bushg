@@ -3,15 +3,9 @@ var jsonFiles;
 
 $(document).ready(async function() {
 	jsonFiles = [(document.getElementById('pet-data-loc').innerHTML+'/info.json')];
-	console.log(jsonFiles[0]);
-	// jsonFiles.forEach( async function(file) {
-		// data += await fetchJson(file);
-	// });
-	console.log("document ready");
 	for(let i = 0; i < jsonFiles.length; i++) {
 		data = data.concat( await fetchJSON(jsonFiles[i]) );
 	}
-	// generateSearchForm(data);
 	if(document.getElementById("tag-group")) {
 		generateTags(data);
 	}
@@ -83,8 +77,7 @@ function generatePets(data) {
 	let numResults = 0;
 	let search = false;
 	for(var i = 0; i < data.length; i++) {
-		console.log(data[i]);
-		console.log(data[i].tags);
+		// console.log(data[i]);
 		let valid = true;
 		let hasATag = false;
 		var tagVals = [];
