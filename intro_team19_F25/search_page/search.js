@@ -1,5 +1,5 @@
 var data = [];
-var jsonFiles = ['/intro_team19_F25/pet_data/info.json'];
+var jsonFiles = ['../pet_data/info.json'];
 
 $(document).ready(async function() {
 	// jsonFiles.forEach( async function(file) {
