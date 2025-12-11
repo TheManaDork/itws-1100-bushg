@@ -8,7 +8,7 @@
     "weight": "30 kg",
     "size": "Large",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/E8D4A9/8D7B68?text=Buddy",
+    "image": "pet_data/Generic_Dog_Photos/dogPics1.jpg",
     "tags": ["friendly", "energetic", "low-maintenance", "playful"],
     "latitude": 34.0522,
     "longitude": -118.2437
@@ -22,7 +22,7 @@
     "weight": "4 kg",
     "size": "Small",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/A9A9A9/5E5E5E?text=Whiskers",
+    "image": "pet_data/Generic_Cat_Photos/catPics1.jpg",
     "tags": ["curious", "independent", "affectionate"],
     "latitude": 40.7128,
     "longitude": -74.0060
@@ -36,7 +36,7 @@
     "weight": "25 kg",
     "size": "Medium",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/B5B5B5/6C6C6C?text=Rocky",
+    "image": "pet_data/Generic_Dog_Photos/dogPics2.jpg",
     "tags": ["energetic", "high-maintenance"],
     "latitude": 51.5074,
     "longitude": -0.1278
@@ -50,7 +50,7 @@
     "weight": "6 kg",
     "size": "Funsized",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/D2B48C/8C6D3F?text=Mittens",
+    "image": "pet_data/Generic_Cat_Photos/catPics2.jpg",
     "tags": ["shy", "gentle", "affectionate", "curious", "calm"],
     "latitude": 48.8566,
     "longitude": 2.3522
@@ -64,7 +64,7 @@
     "weight": "10 kg",
     "size": "Small",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/C0C0C0/707070?text=Max",
+    "image": "pet_data/Generic_Dog_Photos/dogPics3.jpg",
     "tags": ["low-maintenance", "energetic"],
     "latitude": 41.8781,
     "longitude": -87.6298
@@ -78,7 +78,7 @@
     "weight": "5 kg",
     "size": "Jumbo",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/F5F5DC/BDB76B?text=Luna",
+    "image": "pet_data/Generic_Cat_Photos/catPics3.jpg",
     "tags": ["independent", "calm", "affectionate"],
     "latitude": 52.5200,
     "longitude": 13.4050
@@ -92,7 +92,7 @@
     "weight": "35 kg",
     "size": "Large",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/DEB887/8B4513?text=Charlie",
+    "image": "pet_data/Generic_Dog_Photos/dogPics4.jpg",
     "tags": ["friendly", "high-maintenance"],
     "latitude": 35.6895,
     "longitude": 139.6917
@@ -106,7 +106,7 @@
     "weight": "28 kg",
     "size": "Large",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/F0E68C/B8860B?text=Daisy",
+    "image": "pet_data/Generic_Dog_Photos/dogPics5.jpg",
     "tags": ["gentle", "shy", "calm"],
     "latitude": -33.8688,
     "longitude": 151.2093
@@ -120,7 +120,7 @@
     "weight": "4 kg",
     "size": "Medium",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/B2B2B2/696969?text=Smokey",
+    "image": "pet_data/Generic_Cat_Photos/catPics4.jpg",
     "tags": ["curious", "skittish"],
     "latitude": -1.522037,
     "longitude": 29.249540
@@ -134,7 +134,7 @@
     "weight": "12 kg",
     "size": "Medium",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/E6E6FA/9370DB?text=Bella",
+    "image": "pet_data/Generic_Dog_Photos/dogPics6.jpg",
     "tags": ["friendly", "low-maintenance", "affectionate"],
     "latitude": 55.7558,
     "longitude": 37.6173
@@ -148,7 +148,7 @@
     "weight": "8 kg",
     "size": "Small",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/C0C0C0/707070?text=Coco",
+    "image": "pet_data/Generic_Dog_Photos/dogPics7.jpg",
     "tags": ["friendly", "calm", "affectionate", "low-maintenance"],
     "latitude": 45.4215,
     "longitude": -75.6972
@@ -162,7 +162,7 @@
     "weight": "5 kg",
     "size": "Medium",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/A9A9A9/5E5E5E?text=Tiger",
+    "image": "pet_data/Generic_Cat_Photos/catPics5.jpg",
     "tags": ["energetic", "high-maintenance", "curious"],
     "latitude": 59.3293,
     "longitude": 18.0686
@@ -176,7 +176,7 @@
     "weight": "15 kg",
     "size": "Medium",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/DEB887/8B4513?text=Lola",
+    "image": "pet_data/Generic_Dog_Photos/dogPics8.jpg",
     "tags": ["playful", "friendly", "low-maintenance"],
     "latitude": -23.5505,
     "longitude": -46.6333
@@ -190,7 +190,7 @@
     "weight": "6 kg",
     "size": "Large",
     "gender": "Male",
-    "image": "https://placehold.co/300x250/D2B48C/8C6D3F?text=Simba",
+    "image": "pet_data/Generic_Cat_Photos/catPics6.jpg",
     "tags": ["gentle", "affectionate", "calm", "curious"],
     "latitude": 60.1699,
     "longitude": 24.9384
@@ -204,7 +204,7 @@
     "weight": "20 kg",
     "size": "Medium",
     "gender": "Female",
-    "image": "https://placehold.co/300x250/B5B5B5/6C6C6C?text=Molly",
+    "image": "pet_data/Generic_Dog_Photos/dogPics9.jpg",
     "tags": ["energetic", "high-maintenance", "intelligent"],
     "latitude": 19.4326,
     "longitude": -99.1332
