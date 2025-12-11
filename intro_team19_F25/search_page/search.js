@@ -9,8 +9,6 @@ $(document).ready(async function() {
 	// });
 	console.log("document ready");
 	for(let i = 0; i < jsonFiles.length; i++) {
-		console.log("YOOOOO");
-		console.log("pre fetch JSON: "+jsonFiles[i]);
 		data = data.concat( await fetchJSON(jsonFiles[i]) );
 	}
 	// generateSearchForm(data);
@@ -41,7 +39,6 @@ function generateTags(data) {
 	  isChecked = urlParams.has(tagName) && urlParams.get(tagName) === '1';
 	  if(isChecked) checked = "checked";
 	  else checked = "";
-	  console.log("checked = "+checked);
 	  tagGroup.innerHTML += `
 	    <div class="inline-checkbox">
 	      <input type="checkbox" id="${tagName}" name="${tagName}" value="1" ${checked}>
@@ -58,22 +55,21 @@ function generateTags(data) {
 
 
 function generatePets(data) {
-	console.log("GP.data = " + data);
 	let searchVals = new URLSearchParams(window.location.search);
 	if(searchVals) {
-		console.log("Search Vals:"+searchVals);
+		// console.log("Search Vals:"+searchVals);
 		for([key, value] of searchVals) {
 			if(value == "") searchVals.delete(key);
-			console.log(key+" :: "+value);
+			// console.log(key+" :: "+value);
 		}
 	} else {
-		console.log("No search vals");
+		// console.log("No search vals");
 	}
 	if(searchVals.get("sort-type")) {
-		console.log("sorting by: "+searchVals.get("sort-type"));
+		// console.log("sorting by: "+searchVals.get("sort-type"));
 		data = petSort(data, searchVals.get("sort-type"), searchVals.get("sort-direction"));
 	} else {
-		console.log("No sort-type, skipping sorting");
+		// console.log("No sort-type, skipping sorting");
 	}
 	
 	// remove sorting info from searchVals
@@ -83,7 +79,7 @@ function generatePets(data) {
 
 	
 	petGrid = document.getElementById('pet-grid');
-	console.log("add "+data.length+" blocks");
+	// console.log("add "+data.length+" blocks");
 	let numResults = 0;
 	let search = false;
 	for(var i = 0; i < data.length; i++) {
@@ -97,10 +93,10 @@ function generatePets(data) {
 			if(key == "" || value == "") {
 				continue;
 			} else {
-				console.log("filtering by "+key);
+				// console.log("filtering by "+key);
 				search = true;
 			}
-			console.log("For key "+key);
+			// console.log("For key "+key);
 			if(key == "age") {
 				// the age filter requires special parsing
 				petAge = petAgeToNum(data[i]);
@@ -145,7 +141,7 @@ function generatePets(data) {
 		
 
 		if(!valid) {
-			console.log(data[i][key] + " is invalid");
+			// console.log(data[i][key] + " is invalid");
 			continue;
 		}
 		numResults++;
@@ -185,7 +181,6 @@ function generatePets(data) {
 
 
 function fetchJSON(jsonFile) {
-	console.log("fetching json at: "+jsonFile);
 	return fetch(jsonFile)
 		.then(response => {
 			if(!response.ok) {
