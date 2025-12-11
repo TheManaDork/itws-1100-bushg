@@ -11,6 +11,7 @@ error_reporting(E_ALL);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../resources/jquery-3.6.1.min.js"></script>
     <title>Pet Net - Find Your New Best Friend</title>
+    <script src="../settings.js" defer></script>
     <script>
         const theme = localStorage.getItem('theme') || 'light';
         if (theme === 'dark') {
@@ -21,11 +22,12 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="../resources/font_awesome/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./search.css">
-    <script src="../settings.js" defer></script>
     <script src="search.js" defer></script>
 </head>
 
 <body>
+    <!-- Storing links to loading data on a per-file basis -->
+    <div id="pet-data-loc" hidden>../pet_data</div>
 <div class="site-container">
     <header  class="site-header">
         <div class="logo-container">

@@ -1,11 +1,16 @@
 var data = [];
-var jsonFiles = ['../pet_data/info.json'];
+var jsonFiles;
 
 $(document).ready(async function() {
+	jsonFiles =  = [(document.getElementById('pet-data-loc').innerHTML+'/info.json')];
+	console.log(jsonFiles[0]);
 	// jsonFiles.forEach( async function(file) {
 		// data += await fetchJson(file);
 	// });
+	console.log("document ready");
 	for(let i = 0; i < jsonFiles.length; i++) {
+		console.log("YOOOOO");
+		console.log("pre fetch JSON: "+jsonFiles[i]);
 		data = data.concat( await fetchJSON(jsonFiles[i]) );
 	}
 	// generateSearchForm(data);
@@ -82,6 +87,7 @@ function generatePets(data) {
 	let numResults = 0;
 	let search = false;
 	for(var i = 0; i < data.length; i++) {
+		console.log(data[i]);
 		console.log(data[i].tags);
 		let valid = true;
 		let hasATag = false;
@@ -179,6 +185,7 @@ function generatePets(data) {
 
 
 function fetchJSON(jsonFile) {
+	console.log("fetching json at: "+jsonFile);
 	return fetch(jsonFile)
 		.then(response => {
 			if(!response.ok) {
@@ -206,7 +213,7 @@ function generateImage(pet) {
 	} else {
 		return pet.image;
 	}
-	let string = "../pet_data/Generic_"+pet.type+"_Photos/"+type+"Pics"+ num + ".jpg";
+	let string = document.getElementById('pet-data-loc').innerHTML+"/Generic_"+pet.type+"_Photos/"+type+"Pics"+ num + ".jpg";
 	return string;
 }
 
