@@ -2,7 +2,7 @@ var data = [];
 var jsonFiles;
 
 $(document).ready(async function() {
-	jsonFiles =  = [(document.getElementById('pet-data-loc').innerHTML+'/info.json')];
+	jsonFiles = [(document.getElementById('pet-data-loc').innerHTML+'/info.json')];
 	console.log(jsonFiles[0]);
 	// jsonFiles.forEach( async function(file) {
 		// data += await fetchJson(file);
